@@ -105,6 +105,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>https://tvheadend.org/Appendices/markdown_cribsheet/</loc>
+     <lastmod>2015-06-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
