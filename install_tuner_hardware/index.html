@@ -85,9 +85,9 @@
             
                 <li class="toctree-l3"><a href="#install-the-tuner-hardware">Install The Tuner Hardware</a></li>
                 
-                    <li><a class="toctree-l4" href="#1-install-the-tuner-hardware">1. Install the tuner hardware</a></li>
+                    <li><a class="toctree-l4" href="#1-install-the-tuner-hardware">1. Install the Tuner Hardware</a></li>
                 
-                    <li><a class="toctree-l4" href="#2-install-the-tuner-firmware-andor-drivers">2. Install the tuner firmware and/or drivers</a></li>
+                    <li><a class="toctree-l4" href="#2-install-firmware-andor-drivers">2. Install Firmware and/or Drivers</a></li>
                 
             
             </ul>
@@ -427,10 +427,14 @@
             <div class="section">
               
                 <h2 id="install-the-tuner-hardware">Install The Tuner Hardware</h2>
-<p>This section will give you some basic ideas on how to get your tuner working with your operating system. However,
-it&rsquo;s clearly way beyond the scope of this guide to tell you everything: consult specialist forums, search around, 
-and at least do some research to work out what&rsquo;s likely to work or not before you hand over any money.</p>
-<h4 id="1-install-the-tuner-hardware">1. Install the tuner hardware</h4>
+<p>This section will give you some basic ideas on how to get your tuner working
+with your operating system. However, it&rsquo;s clearly way beyond the scope of
+this guide to tell you everything: consult specialist forums, search around, 
+and at least do some research to work out what&rsquo;s likely to work or not
+before you hand over any money.</p>
+<p>There is a discussion about supported hardware on <a href="https://tvheadend.org/boards/5/topics/5102">the Tvheadend
+forums</a>.</p>
+<h3 id="1-install-the-tuner-hardware">1. Install the Tuner Hardware</h3>
 <p>This is obviously a core requirement that&rsquo;s outside of the scope of this guide</p>
 <p>You basically have the choice of:</p>
 <ul>
@@ -444,13 +448,23 @@ and at least do some research to work out what&rsquo;s likely to work or not bef
 <p>External SAT&gt;IP tuners that send their decoded signals over a LAN connection. </p>
 </li>
 </ul>
-<p>Follow the appropriate installation instructions and, if relevant, the setup instruction (e.g. for SAT&gt;IP, which are effectively small, standalone computers).</p>
-<h4 id="2-install-the-tuner-firmware-andor-drivers">2. Install the tuner firmware and/or drivers</h4>
-<p>Similar to the above, tvheadend can do nothing if your tuners aren&rsquo;t working properly. A good place to check how to set up your tuners is the linuxtv wiki - this will not only tell you what&rsquo;s supported under Linux, but also how to get it all working:</p>
+<p>Follow the appropriate installation instructions and, if relevant, the
+setup instruction (e.g. for SAT&gt;IP, which are effectively small, standalone
+computers).</p>
+<h3 id="2-install-firmware-andor-drivers">2. Install Firmware and/or Drivers</h3>
+<p>Similar to the above, Tvheadend can do nothing if your tuners aren&rsquo;t working
+properly. A good place to check how to set up your tuners is the linuxtv
+wiki - this will not only tell you what&rsquo;s supported under Linux, but also
+how to get it all working:</p>
 <p><a href="http://www.linuxtv.org/wiki/index.php/Hardware_Device_Information">LinuxTV wiki device library</a></p>
-<p>Many tuners require firmware - normally, a binary file that&rsquo;s been extracted from the proprietary drivers used by Windows. Many Linux distros include a package for the most common devices (e.g. linux-firmwares under Ubuntu or firmware-linux-nonfree under Debian). If this isn&rsquo;t sufficient, a good source of firmware files is the OpenElec git repository:</p>
+<p>Many tuners require firmware - normally, a binary file that&rsquo;s been extracted
+from the proprietary drivers used by Windows. Many Linux distros include a
+package for the most common devices (e.g. linux-firmwares under Ubuntu or
+firmware-linux-nonfree under Debian). If this isn&rsquo;t sufficient, a good source
+of firmware files is the OpenElec git repository:</p>
 <p><a href="https://github.com/OpenELEC/dvb-firmware">OpenElec firmware library</a></p>
-<p>Typically, you would download the binary file and install it into <code>/lib/firmware</code>, owned by <code>root:root</code>, permissions <code>rw-r--r--</code> (0644)</p>
+<p>Typically, download the binary file and install it into <code>/lib/firmware</code>, owned
+by <code>root:root</code>, permissions <code>rw-r--r--</code> (0644)</p>
               
             </div>
           </div>
