@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Before you begin - some basic concepts - Tvheadend 4.0</title>
+  <title>General - Tvheadend 4.0</title>
   
 
   <link rel="shortcut icon" href="../images/favicon.png">
@@ -22,7 +22,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Before_you_begin"
+    var mkdocs_page_name = "webui_general"
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -71,19 +71,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Before you begin - some basic concepts</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#before-you-begin">Before you begin</a></li>
-                
-                    <li><a class="toctree-l4" href="#hardwaresoftware-fundamentals">Hardware/Software Fundamentals</a></li>
-                
-                    <li><a class="toctree-l4" href="#applicationtvheadend-fundamentals">Application/tvheadend Fundamentals</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../Before_you_begin/">Before you begin - some basic concepts</a>
         
     </li>
 
@@ -118,8 +107,21 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../webui_general/">General</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">General</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#general-overview-of-web-interface">General Overview of Web Interface</a></li>
+                
+                    <li><a class="toctree-l4" href="#page-structure">Page Structure</a></li>
+                
+                    <li><a class="toctree-l4" href="#displaying-and-manipulating-columns">Displaying and Manipulating Columns</a></li>
+                
+                    <li><a class="toctree-l4" href="#editing-fields">Editing Fields</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -415,11 +417,11 @@
     
       
         
-          <li>Getting Started &raquo;</li>
+          <li>Web Interface Guide &raquo;</li>
         
       
     
-    <li>Before you begin - some basic concepts</li>
+    <li>General</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -433,77 +435,68 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="before-you-begin">Before you begin</h2>
-<p>There are some basic concepts that will make life much easier if you 
-understand them from the outset.</p>
-<h3 id="hardwaresoftware-fundamentals">Hardware/Software Fundamentals</h3>
+                <h2 id="general-overview-of-web-interface">General Overview of Web Interface</h2>
+<p>Tvheadend is operated primarily through a tabbed web interface. </p>
+<p>There are some basic navigation concepts that will help you get around and
+make the best of it.</p>
+<h4 id="page-structure">Page Structure</h4>
+<p>The interface is made up of nested tabs, so similar functions are grouped
+together (e.g. all configuration items at the top level, then all configuration
+items for a particular topic are below that).</p>
+<p>Each tab is then typically laid out with a menu bar across the top that
+provides access to Add/Save/Edit-type functions, and a grid like a spreadsheet
+below that. The grid items are frequently editable.</p>
+<h4 id="displaying-and-manipulating-columns">Displaying and Manipulating Columns</h4>
 <ul>
 <li>
-<p>A <strong>tuner</strong> is the hardware (chipset) needed to interpret a digital 
-television signal and extract from it the programme stream. The tuner hardware
-is also responsible for communicating with your satellite dish via the LNB 
-in the case of DVB-S.</p>
+<p>Not all columns are necessarily visible. If you hover your mouse over a
+  column heading, you&rsquo;ll see a down arrow - click here, and a drop-down menu
+  will appear to give you access to <strong>which columns are shown and which are not</strong>.</p>
 </li>
 <li>
-<p>A <strong>driver</strong> is the piece of software that your operating system uses to
-talk to the tuner. This can be built into the OS (e.g. &lsquo;supported since kernel X&rsquo;) 
-or might be a separate piece of software that you need install, and maybe 
-even compile, separately.</p>
+<p>The same drop-down menu gives you access to a <strong>sort</strong> function if defined
+  (it doesn&rsquo;t always make sense to have a sortable column for some parameters).
+  You can also sort a column by simply clicking on the column header; reverse
+  the sort order by clicking again.</p>
 </li>
 <li>
-<p><strong>Firmware</strong> is a small piece of binary microcode that your system driver
-sends to the tuner upon initialisation. This is the cause of more problems
-than you&rsquo;d imagine&hellip; if you find yourself in trouble, this is the first
-thing to check along with kernel support for your hardware.</p>
+<p>And the same drop-down menu also gives you access to a <strong>filter</strong> function
+  if defined. The filter does simple pattern-matching on any string you
+  provide.</p>
+</li>
+<li>
+<p><strong>Re-arrange</strong> the columns by simply dragging he header to a new spot.</p>
+</li>
+<li>
+<p><strong>Re-size</strong> the columns by dragging the very edges of the column header as
+  required. </p>
 </li>
 </ul>
-<h3 id="applicationtvheadend-fundamentals">Application/tvheadend Fundamentals</h3>
-<p>The Tvheadend software then sets up a series of configuration elements, and
-the way in which these interact determines how a TV signal ends up in front
-of you. They all use what&rsquo;s known as a <em>many-to-many</em> relationship, in that
-one configuration element can be related to multiple elements of the next
-type, and vice versa: one tuner has multiple networks, one network can
-exist on multiple tuners. </p>
+<h4 id="editing-fields">Editing Fields</h4>
 <ul>
 <li>
-<p>The <strong>network</strong> is the software definition of your carrier network. Broadly,
-it lays out what sort of network it is (such as DVB-T or DVB-S2), how it 
-gets scanned, where the DVB-S satellite is in orbit, and similar. Networks
-are used by tuners so the hardware knows where to look for a signal.</p>
+<p>To edit a cell, double click on it. After a cell is changed, a small red
+  flag or triangle will appear in the top-left corner to indicate that it
+  has been changed. These changes can now be kept (<em>Save</em> button), or
+  abandoned (<em>Undo</em> button).</p>
 </li>
 <li>
-<p>Networks then have <strong>muxes</strong>. These are the carrier frequencies that exist on
-the old analogue channels that are used to transmit multiple digital signals
-rather than a single analogue one. These signals are multiplexed together,
-hence the name <em>mux</em>.</p>
+<p>To change a checkbox or radio button, click once.</p>
 </li>
 <li>
-<p>Muxes then carry <strong>services</strong>. These are the individual streams of data.
-They can be TV or radio programmes, they can provide data services such as
-digital teletext, or they can be used as part of the control code for 
-catch-up IPTV services.</p>
+<p>To add a new entry, press the <em>Add</em> button. The new (empty) entry will
+  be created on the server but will not be saved and will not necessarily
+  be enabled. You can now change all the cells to the desired values, check
+  the ‘enable’ box if applicable and then press <em>Save</em> to activate the new
+  entry.</p>
 </li>
 <li>
-<p>And finally, services are mapped to <strong>channels</strong>. These are what you
-and your client software think in terms of: <em>&ldquo;I&rsquo;d like to watch BBC One
-now, please&rdquo;</em>.</p>
+<p>Most rows are multi-selectable, so you can carry out certain actions on
+  more than one entry at the same time. So, for example, you can select
+  multiple items by using <keyboard>Ctrl+click</keyboard> on each
+  entry or <keyboard>Click, Shift+click</keyboard> to select a range.</p>
 </li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Why The Complexity?</p>
-<p>Simply, because 'BBC One' might exist in many different places... it 
-might have regional variations on multiple frequencies (so different services
-on different muxes); it might exist on more than one source (perhaps on two
-different satellites); and it might thus be accessible through more than one
-piece of hardware (two satellite tuners, or one satellite and one terrestrial
-tuner).</p>
-<p>When you select the channel you want to watch or record, Tvheadend can
-then map a path through all those variables to ask a particular tuner to
-go and get the signal for you.</p>
-</div>
-
-<p>The following diagram explains the relationship between these components:</p>
-<p><img alt="Relationship Between Tuners, Neworks, Muxes, Services and Channels" src="../images/tvh_schematic.png" /></p>
               
             </div>
           </div>
@@ -511,10 +504,10 @@ go and get the signal for you.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../install_tuner_hardware/" class="btn btn-neutral float-right" title="Install your tuner hardware"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../webui/epg/" class="btn btn-neutral float-right" title="Electronic Program Guide Tab"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../overview/" class="btn btn-neutral" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../configure_tvheadend/" class="btn btn-neutral" title="Configure Tvheadend"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -543,10 +536,10 @@ go and get the signal for you.</p>
           <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../overview/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../configure_tvheadend/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../install_tuner_hardware/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../webui/epg/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

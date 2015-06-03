@@ -108,6 +108,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../../webui_general/">General</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../epg/">Electronic Program Guide Tab</a>
         
     </li>
@@ -428,21 +435,6 @@
               
                 <h2 id="configuration-channelepg-channels">Configuration - Channel/EPG - Channels</h2>
 <p>Display and edit channel configuration here.</p>
-<p>The channels are listed / edited in a grid.</p>
-<ul>
-<li>
-<p>To edit a cell, double-click on it. After a cell is changed it will
-  flags one of its corner to red to indicated that it has been
-  changed. To commit these changes back to Tvheadend press the ‘Save
-  changes’ button. In order to change a Checkbox cell you only have to
-  click once in it.</p>
-</li>
-<li>
-<p>To delete one or more entries, select the lines (by clicking once on
-  them), and press the ‘Delete selected’ button. A popup will ask you
-  to confirm your request.</p>
-</li>
-</ul>
 <p><img alt="'Channels' Tab" src="../docresources/channeltab.png" /></p>
 <hr />
 <h4 id="menu-barbuttons">Menu Bar/Buttons</h4>
@@ -457,47 +449,51 @@
 <tbody>
 <tr>
 <td><strong>Save</strong></td>
-<td></td>
+<td>Save any changes made to the channel configuration.</td>
 </tr>
 <tr>
 <td><strong>Undo</strong></td>
-<td></td>
+<td>Undo any changes made to the channel configuration since the last save (changes are marked by a small red triangle).</td>
 </tr>
 <tr>
 <td><strong>Add</strong></td>
-<td></td>
+<td>Add a new channel.</td>
 </tr>
 <tr>
 <td><strong>Delete</strong></td>
-<td></td>
+<td>Delete an existing channel.</td>
 </tr>
 <tr>
 <td><strong>Edit</strong></td>
-<td></td>
+<td>Edit an existing channel. This allows you to change any of the parameters you’d otherwise set when adding a new channel, e.g. name, number, EPG source, tags, etc.</td>
 </tr>
 <tr>
 <td><strong>Map Services</strong></td>
-<td></td>
+<td>Map all services to channels. You will be prompted to include/exclude e.g. encrypted channels.</td>
 </tr>
 <tr>
 <td><strong>Assign number</strong></td>
-<td></td>
+<td>Assign the lowest free channel number to the selected channel.</td>
 </tr>
 <tr>
 <td><strong>Number Up</strong></td>
-<td></td>
+<td>Increase by one the channel number for the selected channel.</td>
 </tr>
 <tr>
 <td><strong>Number Down</strong></td>
-<td></td>
+<td>Decrease by one the channel number for the selected channel.</td>
 </tr>
 <tr>
 <td><strong>Swap Number</strong></td>
-<td></td>
+<td>Swap the numbers over for the two selected channels.</td>
 </tr>
 <tr>
 <td><strong>Reset Icon</strong></td>
-<td></td>
+<td>Reset the icon URL for the selected channel.</td>
+</tr>
+<tr>
+<td><strong>Help</strong></td>
+<td>Displays this help page.</td>
 </tr>
 </tbody>
 </table>
@@ -505,28 +501,26 @@
 <h4 id="columns">Columns</h4>
 <p>The columns have the following functions:</p>
 <p><strong>Play</strong>
-: Direct play link using the HTTP streaming.</p>
-<p>URL to the stream using a channel name:</p>
-<p><code>http://*host:port*/play/stream/channelname/*channel\_name*</code></p>
-<p>URL to the stream using a channel number:</p>
-<p><code>http://*host:port*/play/stream/channelnumber/*channel\_number*</code></p>
+: Play the relevant channel using HTTP streaming.</p>
 <p><strong>Enabled</strong>
-: Whether or not the mux is enabled and thus available.
-  Channel number. This is not used by Tvheadend internally, but rather
-  intended to be used by HTSP clients for mapping to remote control
-  buttons, presentation order, etc</p>
-<p><strong>Number</strong>
-: Channel number. This is not used by Tvheadend internally, but rather
-  intended to be used by HTSP clients for mapping to remote control
-  buttons, presentation order, etc</p>
+: Whether or not the mux is enabled and thus available.</p>
 <p><strong>Name</strong>
 : Name of the channel as presented in EPG and external interfaces.
   Changing name of a channel does not interfere with scheduled recordings,
   etc.</p>
-<p><strong>Play</strong>
-: Play the channel using the VLC plugin (if available) else it will
-  display a direct link that can be used to open in preferred media
-  player.</p>
+<p><strong>Number</strong>
+: Channel number. This is not used by Tvheadend internally, but rather
+  intended to be used by HTSP clients for mapping to remote control
+  buttons, presentation order, etc</p>
+<p><strong>User Icon</strong>
+: A URL pointing to an image representing the channel. The icon URL will
+  be set automatically when importing data from XMLTV, when picon path is
+  set or when channel icon path is set in the general config. This field
+  allows the user to edit it manually. The reset icon action allows to
+  re-set the automatic URL for selected channel (e.g. after configuration
+  change).</p>
+<p><strong>Icon URL</strong>
+: text</p>
 <p><strong>Auto EPG Channel</strong>
 : Auto-link EPG channels from XMLTV and OpenTV EPG grabbers using the
   channel name for matching. If you turn this option off, only OTA EPG
@@ -545,30 +539,27 @@
 linking is implicitly tied since they are all part of the DVB system.</p>
 </div>
 
-<p><strong>Tags</strong>
-: Each channel can be bound to a zero, one or many tags. The tags are used
-  for multiple things and it’s up to you how you wish to use and name
-  them. Tags can be used to aid searching in the EPG if you have many
-  channels. The tags are also presented in a Media player.</p>
-<p><strong>User Icon</strong>
-: A URL pointing to an image representing the channel. The icon URL will
-  be set automatically when importing data from XMLTV, when picon path is
-  set or when channel icon path is set in the general config. This field
-  allows the user to edit it manually. The reset icon action allows to
-  re-set the automatic URL for selected channel (e.g. after configuration
-  change).</p>
-<p><strong>DVR Pre-Start</strong>
+<p><strong>DVR Pre</strong>
 : Allows the user to specify an amount of extra time that should be
   prepended to a recording scheduled on this channel. In other words, if
   you type 5 here for a recording that is scheduled for 20:00 will start
   to record at 19:55. This setting overrides the Extra time before
   recordings DVR setting.</p>
-<p><strong>DVR Post-End</strong>
+<p><strong>DVR Post</strong>
 : Similar to DVR Pre-Start this allows the user to add an extra amount of
   time that should be appended to a recording. In other words, if you type
   5 here for a recording that is scheduled to end 20:30 will stop to
   record at 20:35. This setting overrides the Extra time after recordings
   DVR setting.</p>
+<p><strong>Services</strong>
+: text</p>
+<p><strong>Tags</strong>
+: Each channel can be bound to a zero, one or many tags. The tags are used
+  for multiple things and it’s up to you how you wish to use and name
+  them. Tags can be used to aid searching in the EPG if you have many
+  channels. The tags are also presented in a Media player.</p>
+<p><strong>Bouquet</strong>
+: text</p>
               
             </div>
           </div>

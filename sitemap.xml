@@ -46,6 +46,12 @@
     
         
     <url>
+     <loc>https://tvheadend.org/webui_general/</loc>
+     <lastmod>2015-06-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>https://tvheadend.org/webui/epg/</loc>
      <lastmod>2015-06-03</lastmod>
      <changefreq>daily</changefreq>
