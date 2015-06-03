@@ -427,35 +427,14 @@
             <div class="section">
               
                 <h2 id="configuration-access-entries">Configuration - Access Entries</h2>
-<p>Setting up access control is an important initial step as <strong>the system
-initially is wide open</strong>. </p>
-<p>When Tvheadend verifies access is scan through all the enabled access
-control entries. The permission flags, streaming profiles, DVR config
-profiles, channel tags are combined for all matching access entries. An
-access entry is said to match if the username / password matches and the
-IP source address of the requesting peer is within the prefix.</p>
-<p>The access rules are listed / edited in a grid.</p>
-<ul>
-<li>
-<p>To edit a cell, double click on it. After a cell is changed it will
-  flags one of its corner to red to indicated that it has been
-  changed. To commit these changes back to Tvheadend press the ‘Save
-  changes’ button. In order to change a Checkbox cell you only have to
-  click once in it.</p>
-</li>
-<li>
-<p>To add a new entry, press the ‘Add entry’ button. The new (empty)
-  entry will be created on the server but will not be in its enabled
-  state. You can now change all the cells to the desired values, check
-  the ‘enable’ box and then press ‘Save changes’ to activate the new
-  entry.</p>
-</li>
-<li>
-<p>To delete one or more entries, select the lines (by clicking once on
-  them), and press the ‘Delete selected’ button. A popup will ask you
-  to confirm your request.</p>
-</li>
-</ul>
+<p>Setting up access control is an important initial step as <strong><u>the system
+is initially wide open</u></strong>. </p>
+<p>Tvheadend verifies access by scanning through all enabled access control
+entries in sequence, from the top of the list to the bottom. The permission
+flags, streaming profiles, DVR config profiles, channel tags and so on are
+combined for all matching access entries. An access entry is said to match
+if the username / password matches and the IP source address of the
+requesting peer is within the prefix.</p>
 <p><img alt="'Access Entries' Tab" src="../docresources/accessconfig.png" /></p>
 <hr />
 <h4 id="menu-barbuttons">Menu Bar/Buttons</h4>
@@ -470,31 +449,35 @@ IP source address of the requesting peer is within the prefix.</p>
 <tbody>
 <tr>
 <td><strong>Save</strong></td>
-<td></td>
+<td>Save any changes made to the access rules.</td>
 </tr>
 <tr>
 <td><strong>Undo</strong></td>
-<td></td>
+<td>Undo any changes made to the access rules since the last save (changes are marked by a small red triangle).</td>
 </tr>
 <tr>
 <td><strong>Add</strong></td>
-<td></td>
+<td>Add a new access rule.</td>
 </tr>
 <tr>
 <td><strong>Delete</strong></td>
-<td></td>
+<td>Delete the selected access rule.</td>
 </tr>
 <tr>
 <td><strong>Move up</strong></td>
-<td></td>
+<td>Move the selected rule up one level (rules are executed top to bottom).</td>
 </tr>
 <tr>
 <td><strong>Move down</strong></td>
-<td></td>
+<td>Move the selected rule down one level (rules are executed top to bottom).</td>
 </tr>
 <tr>
 <td><strong>Edit</strong></td>
-<td></td>
+<td>Edit the selected access rule.</td>
+</tr>
+<tr>
+<td><strong>Help</strong></td>
+<td>Display this help page.</td>
 </tr>
 </tbody>
 </table>
@@ -505,13 +488,13 @@ IP source address of the requesting peer is within the prefix.</p>
 : Enable this access control rule. Uncheck the box to disable.</p>
 <p><strong>Username</strong>
 : Login name to be used. If no username is required, this entry should
-contain a single asterisk (*).</p>
+contain a single asterisk (<code>*</code>).</p>
 <p><strong>Password</strong>
-: Login password to be used. If username is ‘*’ (unused), the password
+: Login password to be used. If username is <code>*</code> (unused), the password
 should be the same (i.e. match any username/password combination, or no
 username/password required).</p>
 <p><strong>Network prefix</strong>
-: IPv4 prefix for matching based on source IP address. If set to 0.0.0.0/0
+: IPv4 prefix for matching based on source IP address. If set to <code>0.0.0.0/0</code>
 it will match everything. The multiple networks can be delimited using
 comma or semicolon.</p>
 <p><strong>Web interface</strong>
@@ -566,13 +549,13 @@ It does not serve any active purpose.</p>
 <hr />
 <p>Let’s also take a look at an example:</p>
 <p><img alt="Access Entries Example" src="../docresources/accessconfigexample.png" /></p>
-<p>First line gives clients originating from 192.168.0.0 - 192.168.0.255
-network access to streaming functions. Typically you would use this for
-your local media players at home (All though Movian can prompt for
-username &amp; password in its HTSP client)</p>
+<p>The first line gives clients originating from <em>192.168.0.0 - 192.168.0.255</em>
+network access to streaming functions. Typically, you would use this for
+your local media players at home (Although Movian can prompt for username
+and password in its HTSP client)</p>
 <p>The second line adds a user with world wide access who might want to
-modify recordings, etc, perhaps from the job, or mobile phone.</p>
-<p>The third line provide admin access to the ‘admin’ user. As an extra
+modify recordings, etc., perhaps from their workplace or via a mobile &lsquo;phone.</p>
+<p>The third line provide admin access to an <em>admin</em> user. As an extra
 precaution this user is only allowed to log in from the home network.</p>
               
             </div>
