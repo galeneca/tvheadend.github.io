@@ -52,15 +52,22 @@
         <ul class="current">
           
             <li>
+    <ul class="subnav">
+    <li><span>Introduction</span></li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="..">Home</a>
         
     </li>
-<li>
-          
-            <li>
-    <ul class="subnav">
-    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../todo/">To-do</a>
+        
+    </li>
 
         
             
@@ -72,7 +79,29 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Before_you_begin/">Before you begin - some basic concepts</a>
+        <a class="" href="../basic_requirements/">Basic Requirements</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../features/">Features</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../before_you_begin/">Before you begin - some basic concepts</a>
         
     </li>
 
@@ -107,9 +136,18 @@
                 
                     <li><a class="toctree-l4" href="#4-if-necessary-manually-add-muxes">4. If Necessary, Manually Add Muxes</a></li>
                 
+            
+                <li class="toctree-l3"><a href="#note-text-required">NOTE: TEXT REQUIRED</a></li>
+                
                     <li><a class="toctree-l4" href="#5-scan-for-services">5. Scan for Services</a></li>
                 
+            
+                <li class="toctree-l3"><a href="#note-text-required_1">NOTE: TEXT REQUIRED</a></li>
+                
                     <li><a class="toctree-l4" href="#6-map-services-to-channels">6. Map Services to Channels</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#note-text-required_2">NOTE: TEXT REQUIRED</a></li>
                 
                     <li><a class="toctree-l4" href="#7-watch-tv">7. Watch TV</a></li>
                 
@@ -296,7 +334,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../webui/config_esfilter/">Video Stream Filters</a>
+        <a class="" href="../webui/config_esfilter/">(Various) Stream Filters</a>
         
     </li>
 
@@ -336,6 +374,42 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../webui/config_tvhlog/">Debugging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Status Tab</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/status_stream/">Stream</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/status_subscriptions/">Subscriptions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/status_connections/">Connections</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/status_servicemapper/">Service Mapper</a>
         
     </li>
 
@@ -473,6 +547,7 @@ pre-defined values, but you may need to add muxes manually.</p>
 <div class="admonition warning">
 <p class="admonition-title">Critical Configuration Items</p>
 <p>Critical configuration items at this stage: <........></p>
+<p><strong>NOTE: <font color=red>TEXT REQUIRED</font></strong></p>
 </div>
 
 <h3 id="3-associate-the-network-with-the-respective-tuners">3. Associate the Network with the Respective Tuner(s)</h3>
@@ -488,6 +563,7 @@ tuner. </p>
 <div class="admonition warning">
 <p class="admonition-title">Critical Configuration Items</p>
 <p>Critical configuration items at this stage: <........></p>
+<p><strong>NOTE: <font color=red>TEXT REQUIRED</font></strong></p>
 </div>
 
 <p>At this point, your tuners now know what networks to use: one network can
@@ -522,11 +598,13 @@ central and northern Europe</p>
 <blockquote>
 <p>other major sources....?</p>
 </blockquote>
+<h2 id="note-text-required">NOTE: <font color=red>TEXT REQUIRED</font></h2>
 <p>You can also use <a href="http://www.linuxtv.org/wiki/index.php/Dvbscan">dvbscan</a> to
 force a scan and effectively ask your tuner what it can see.</p>
 <div class="admonition warning">
 <p class="admonition-title">Critical Configuration Items</p>
 <p>Critical configuration items at this stage: <........></p>
+<p><strong>NOTE: <font color=red>TEXT REQUIRED</font></strong></p>
 </div>
 
 <h3 id="5-scan-for-services">5. Scan for Services</h3>
@@ -543,6 +621,7 @@ and language(s), and so on.</p>
 <blockquote>
 <p>To force a scan &hellip;</p>
 </blockquote>
+<h2 id="note-text-required_1">NOTE: <font color=red>TEXT REQUIRED</font></h2>
 <h3 id="6-map-services-to-channels">6. Map Services to Channels</h3>
 <p>Once scanning for services is complete, you need to map the services to 
 channels so your client can actually request them (i.e. so you can watch
@@ -558,6 +637,7 @@ can for &lsquo;Map All&rsquo;, above.</p>
 <p>Any explanation on how a channel can map to multiple services &lt;......&gt;</p>
 <p>Anything about using bouquets</p>
 </blockquote>
+<h2 id="note-text-required_2">NOTE: <font color=red>TEXT REQUIRED</font></h2>
 <h3 id="7-watch-tv">7. Watch TV</h3>
 <p>That&rsquo;s it - you&rsquo;re done. You should now have a working basic Tvheadend
 installation with channels mapped and ready for use!</p>

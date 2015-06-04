@@ -52,15 +52,22 @@
         <ul class="current">
           
             <li>
+    <ul class="subnav">
+    <li><span>Introduction</span></li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../..">Home</a>
         
     </li>
-<li>
-          
-            <li>
-    <ul class="subnav">
-    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../todo/">To-do</a>
+        
+    </li>
 
         
             
@@ -72,7 +79,29 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../Before_you_begin/">Before you begin - some basic concepts</a>
+        <a class="" href="../../basic_requirements/">Basic Requirements</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../features/">Features</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../before_you_begin/">Before you begin - some basic concepts</a>
         
     </li>
 
@@ -127,7 +156,7 @@
                 
                     <li><a class="toctree-l4" href="#buttons">Buttons</a></li>
                 
-                    <li><a class="toctree-l4" href="#columns">Columns</a></li>
+                    <li><a class="toctree-l4" href="#grid-items">Grid Items</a></li>
                 
                     <li><a class="toctree-l4" href="#event-details-and-recording">Event details and recording</a></li>
                 
@@ -296,7 +325,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../config_esfilter/">Video Stream Filters</a>
+        <a class="" href="../config_esfilter/">(Various) Stream Filters</a>
         
     </li>
 
@@ -336,6 +365,42 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../config_tvhlog/">Debugging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Status Tab</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_stream/">Stream</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_subscriptions/">Subscriptions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_connections/">Connections</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_servicemapper/">Service Mapper</a>
         
     </li>
 
@@ -469,23 +534,23 @@ displayed.</p>
 <tbody>
 <tr>
 <td><strong>Search title&hellip;</strong></td>
-<td>Only display events that match the given title. The filter uses case-insensitive regular expressions. If you don’t know what a regular expression is, this simply means that you can type just parts of the title and filter on that - there’s no need for full, exact matching. If the fulltext checkbox is checked, the title text is matched against title, subtitle, summary and description.</td>
+<td>Only display events that match the given title.<br><br>The filter uses case-insensitive regular expressions. If you don’t know what a regular expression is, this simply means that you can type just parts of the title and filter on that - there’s no need for full, exact matching. If the fulltext checkbox is checked, the title text is matched against title, subtitle, summary and description.</td>
 </tr>
 <tr>
 <td><strong>Filter channel&hellip;</strong></td>
-<td>Only display events from the selected channel. Channels in the drop down are ordered by channel number and can be filtered (by name) by typing in the box.</td>
+<td>Only display events from the selected channel.<br><br>Channels in the drop down are ordered by channel number and can be filtered (by name) by typing in the box.</td>
 </tr>
 <tr>
 <td><strong>Filter tag&hellip;</strong></td>
-<td>Only display events from channels which are included in the selected tag. Tags are used for grouping channels together - such as ‘Radio’ or ‘HDTV’ - and are configured by the administrator. You can start typing a tag name to filter the list.</td>
+<td>Only display events from channels which are included in the selected tag.<br><br>Tags are used for grouping channels together - such as ‘Radio’ or ‘HDTV’ - and are configured by the administrator. You can start typing a tag name to filter the list.</td>
 </tr>
 <tr>
 <td><strong>Filter content type&hellip;</strong></td>
-<td>Only display events that match the given content type tag. Most DVB networks classify their events into content groups. This field allows you to filter based on content type (e.g. “Sports” or “Game Show”). Supported tags are determined by your broadcaster. Again, simply start typing to filter the entries if you have a long list to choose from.</td>
+<td>Only display events that match the given content type tag.<br><br>Most DVB networks classify their events into content groups. This field allows you to filter based on content type (e.g. “Sports” or “Game Show”). Supported tags are determined by your broadcaster. Again, simply start typing to filter the entries if you have a long list to choose from.</td>
 </tr>
 <tr>
 <td><strong>Filter duration&hellip;</strong></td>
-<td>Only display events that fall between the given minimum and maximum durations. This allows you to filter for or against, say, a daily broadcast and a weekly omnibus edition of a programme, or only look for short news bulletins and not the 24-hour rolling broadcasts.</td>
+<td>Only display events that fall between the given minimum and maximum durations.<br><br>This allows you to filter for or against, say, a daily broadcast and a weekly omnibus edition of a programme, or only look for short news bulletins and not the 24-hour rolling broadcasts.</td>
 </tr>
 </tbody>
 </table>
@@ -562,8 +627,8 @@ button.</p>
 </tbody>
 </table>
 <hr />
-<h4 id="columns">Columns</h4>
-<p>The columns have the following functions:</p>
+<h4 id="grid-items">Grid Items</h4>
+<p>The main grid items have the following functions:</p>
 <p><strong>Details</strong>
 : Displays the current status of a recording event for this programme if 
   one applies: </p>
@@ -599,9 +664,9 @@ button.</p>
   value of this field by clicking on it (e.g. click on &lsquo;Channel 4 HD&rsquo; will
   automatically filter the whole grid to only show programmes from that channel).</em></p>
 <p><strong>Stars</strong>
-: text</p>
+: <font color=red>Text&hellip;</font></p>
 <p><strong>Age</strong>
-: text</p>
+: <font color=red>Text&hellip;</font></p>
 <p><strong>Content Type</strong>
 : Any content/genre information as provided by the EPG provider. <em>You can
   automatically set a filter to the value of this field by clicking on it

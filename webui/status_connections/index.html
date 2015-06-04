@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>EPG Grabber - Tvheadend 4.0</title>
+  <title>Connections - Tvheadend 4.0</title>
   
 
   <link rel="shortcut icon" href="../../images/favicon.png">
@@ -22,7 +22,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "webui/config_epggrab"
+    var mkdocs_page_name = "webui/status_connections"
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -281,38 +281,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">EPG Grabber</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#configuration-channelepg-epg-grabber">Configuration - Channel/EPG - EPG Grabber</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#note-screenshot-here">NOTE: SCREENSHOT HERE</a></li>
-                
-                    <li><a class="toctree-l4" href="#menu-barbuttons">Menu Bar/Buttons</a></li>
-                
-                    <li><a class="toctree-l4" href="#grabber-types">Grabber Types</a></li>
-                
-                    <li><a class="toctree-l4" href="#grabber-modules">Grabber Modules</a></li>
-                
-                    <li><a class="toctree-l4" href="#cron-multi-line-config-text-areas">Cron multi-line config text areas</a></li>
-                
-                    <li><a class="toctree-l4" href="#configuration-options">Configuration Options</a></li>
-                
-                    <li><a class="toctree-l4" href="#general-config">General Config</a></li>
-                
-                    <li><a class="toctree-l4" href="#internal-grabber">Internal Grabber</a></li>
-                
-                    <li><a class="toctree-l4" href="#over-the-air-grabbers">Over-the-air Grabbers</a></li>
-                
-                    <li><a class="toctree-l4" href="#external-interfaces">External interfaces</a></li>
-                
-                    <li><a class="toctree-l4" href="#notes">Notes</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../config_epggrab/">EPG Grabber</a>
         
     </li>
 
@@ -401,8 +371,28 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../status_connections/">Connections</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Connections</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#status-connections">Status - Connections</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#note-intro-text">Note: Intro text</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#note-screenshot">Note: Screenshot</a></li>
+                
+                    <li><a class="toctree-l4" href="#menu-barbuttons">Menu Bar/Buttons</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#note-need-to-add-a-help-button">Note: Need to add a help button!</a></li>
+                
+                    <li><a class="toctree-l4" href="#grid-items">Grid Items</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -499,11 +489,11 @@
     
       
         
-          <li>Channel/EPG &raquo;</li>
+          <li>Status Tab &raquo;</li>
         
       
     
-    <li>EPG Grabber</li>
+    <li>Connections</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -517,12 +507,11 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="configuration-channelepg-epg-grabber">Configuration - Channel/EPG - EPG Grabber</h2>
-<p>This tab is used to configure the Electronic Program Guide (EPG)
-grabbing capabilities. Tvheadend supports a variety of different EPG
-grabbing mechanisms. These fall into 3 broad categories, within which
-there are a variety of specific grabber implementations.</p>
-<h2 id="note-screenshot-here">NOTE: <font color=red>SCREENSHOT HERE</font></h2>
+                <h2 id="status-connections">Status - Connections</h2>
+<h2 id="note-intro-text">Note: <font color=red>Intro text</font></h2>
+<h2 id="note-screenshot">Note: <font color=red>Screenshot</font></h2>
+<p>This is a read-only tab; nothing is configurable.</p>
+<hr />
 <h4 id="menu-barbuttons">Menu Bar/Buttons</h4>
 <p>The following functions are available:</p>
 <table>
@@ -534,174 +523,23 @@ there are a variety of specific grabber implementations.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>Save Configuration</strong></td>
-<td>Save any changes made to the grabber configuration.</td>
-</tr>
-<tr>
-<td><strong>Trigger OTA EPG Grabber</strong></td>
-<td>Force an immediate tune to the OTA EPG mux to request EPG updates.</td>
-</tr>
-<tr>
 <td><strong>Help</strong></td>
-<td>Displays this help page.</td>
+<td>Display this help page.</td>
 </tr>
 </tbody>
 </table>
+<h2 id="note-need-to-add-a-help-button">Note: <font color=red>Need to add a help button!</font></h2>
 <hr />
-<h4 id="grabber-types">Grabber Types</h4>
-<ul>
-<li>
-<p><strong>Over-the-Air (OTA)</strong>
-: These grabbers receive EPG data directly from
-  the DVB network. This is often the easiest way to get up and running
-  and does provide timely updates should scheduling change. However,
-  the information isn’t always as rich as some of the other grabbers.</p>
-</li>
-<li>
-<p><strong>Internal</strong>
-: These are grabbers which can be internally initiated from
-  within Tvheadend using a very simple scheduler. These are typically
-  Internet-based services. This can be a quick way to get richer EPG
-  data where you don’t have decent OTA support.</p>
-</li>
-<li>
-<p><strong>External</strong>
-: These provide the option to run grabber scripts
-  externally and to send data into Tvheadend via Unix domain sockets.
-  It provides the ability to run more complex configurations using
-  things like cronjob’s, script chains, etc.</p>
-</li>
-</ul>
-<h4 id="grabber-modules">Grabber Modules</h4>
-<ul>
-<li>
-<p><strong>EIT</strong>
-: This is a DVB standards compatible EIT grabber. Typically it
-  will retrieve now/next information, though on some networks there
-  may be more extensive data published.</p>
-</li>
-<li>
-<p><strong>Freesat/view</strong>
-: This is an extended version of EIT that is used by
-  the Free-to-air DVB providers in the UK. It includes additional
-  information such as series links and episode identifiers.</p>
-</li>
-<li>
-<p><strong>OpenTV</strong> 
-: This is a proprietary OTA EPG grabber. It’s known to be
-  used on the SKY networks, but others may use it. You need two
-  configuration files to define settings for your particular network,
-  if you don’t see yours listed please visit IRC #hts for help.</p>
-</li>
-<li>
-<p><strong>XMLTV</strong>
-: This is am Internet-based suite of scripts, for more
-  information about XMLTV please visit <a href="http://www.xmltv.org">http://www.xmltv.org</a>. To make
-  use of the internal XMLTV grabber you typically require the
-  xmltv-utils package to be installed. If you install new grabbers you
-  will need to restart Tvheadend to pick these up as they’re loaded at
-  startup. If you see no XMLTV grabbers listed then most probably
-  XMLTV is not properly installed and in the PATH.</p>
-</li>
-<li>
-<p><strong>PyEPG</strong>
-: This is another Internet-based scraper. It currently only
-  supports the Atlas UK system (for which you need a key), but it does
-  provide a very rich EPG data set. For more information see
-  <a href="http://github.com/adamsutton/PyEPG">http://github.com/adamsutton/PyEPG</a>.</p>
-</li>
-</ul>
-<h4 id="cron-multi-line-config-text-areas">Cron multi-line config text areas</h4>
-<p>The cron lines looks like:</p>
-<pre><code>       # * * * * *  command to execute
-       # ┬ ┬ ┬ ┬ ┬
-       # │ │ │ │ │
-       # │ │ │ │ │
-       # │ │ │ │ └───── day of week (0 - 6 or Sunday - Saturday)
-       # │ │ │ └────────── month (1 - 12)
-       # │ │ └─────────────── day of month (1 - 31)
-       # │ └──────────────────── hour (0 - 23)
-       # └───────────────────────── min (0 - 59)
-</code></pre>
-<p>With the following cron special characters&hellip;</p>
-<ul>
-<li>
-<p><strong>Asterisk (<code>*</code>)</strong>
-: The asterisk indicates that the cron expression matches for all
-  values of the field. E.g., using an asterisk in the 4th field
-  (month) indicates every month.</p>
-</li>
-<li>
-<p><strong>Slash (<code>/</code>)</strong>
-: Slashes describe increments of ranges. For example 3-59/15 in the
-  1st field (minutes) indicate the third minute of the hour and every
-  15 minutes thereafter. The form “*…” is equivalent to the form
-  “first-last…”, that is, an increment over the largest possible
-  range of the field.</p>
-</li>
-<li>
-<p><strong>Comma (<code>,</code>)</strong>
-  Commas are used to separate items of a list. For example, using
-  “MON,WED,FRI” in the 5th field (day of week) means Mondays,
-  Wednesdays and Fridays.</p>
-</li>
-<li>
-<p><strong>Hyphen (<code>-</code>)</strong>
-: Hyphens define ranges. For example, 2000-2010 indicates every year
-  between 2000 and 2010 AD, inclusive.</p>
-</li>
-<li>
-<p><strong>Number-sign (<code>#</code>)</strong>
-: Number-sign defines a start of a comment. The rest of line is
-  ignored behind this character.</p>
-</li>
-</ul>
-<hr />
-<h4 id="configuration-options">Configuration Options</h4>
-<h4 id="general-config">General Config</h4>
-<p><strong>Update channel name</strong>
-: Automatically update channel names using information provided by the
-  enabled EPG providers.</p>
-<p><strong>Update channel number</strong>
-: Automatically update channel numbers using information provided by the
-  enabled EPG providers.</p>
-<p><strong>Update channel icon</strong>
-: Automatically update channel icons using information provided by the
-  enabled EPG providers.</p>
-<p><strong>Periodic save EPG to disk Interval</strong>
-: Writes the current in-memory EPG database to disk every x Hours (user
-  defined), so should a crash/unexpected shutdown occur EPG data is saved
-  periodically to the database (Re-read on next startup). Set to 0 to
-  disable.</p>
-<h4 id="internal-grabber">Internal Grabber</h4>
-<p><strong>Module</strong>
-: Select which internal grabber to use.</p>
-<p><strong>Cron multi-line</strong>
-: Multiple lines of the cron time specification.</p>
-<h4 id="over-the-air-grabbers">Over-the-air Grabbers</h4>
-<p><strong>Force initial EPG scan at startup</strong>
-: … no comment</p>
-<p><strong>Cron multi-line</strong>
-: Multiple lines of the cron time specification.</p>
-<p><strong>EPG scan timeout in seconds</strong>
-: The multiplex (mux) is tuned for this amount of time at maximum. If EPG
-  data are completed before this limit, the mux is released sooner.</p>
-<p><strong>Checkbox list</strong>
-: Checkbox list to enable/disable available modules. By default all
-  grabbers should be enabled.</p>
-<h4 id="external-interfaces">External interfaces</h4>
-<p>Checkbox list to enable/disable available modules. The path field
-contains the absolute path of the unix domain socket into which EPG data
-can be sent.</p>
-<p>To send data to the socket use the command <code>netcat -u SOCKET_PATH</code>.</p>
-<p>Note: for some systems the netcat flags can vary so please consult the
-man page.</p>
-<h4 id="notes">Notes</h4>
-<p>To apply any changes please use the [Save configuration button]</p>
-<p>XMLTV/PyEPG - if you are using the internal versions of these modules
-then you must first configure them externally as Tvheadend provides no
-support for this. Nor does it provide the ability to pass command line
-options (for this use the external interface).</p>
+<h4 id="grid-items">Grid Items</h4>
+<p>The main grid items have the following functions:</p>
+<p><strong>Item</strong>
+: Description</p>
+<p><strong>Item</strong>
+: Description</p>
+<p><strong>Item</strong>
+: Description</p>
+<p><strong>Item</strong>
+: Description</p>
               
             </div>
           </div>
@@ -709,10 +547,10 @@ options (for this use the external interface).</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../config_streamprofile/" class="btn btn-neutral float-right" title="Stream Profiles"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../status_servicemapper/" class="btn btn-neutral float-right" title="Service Mapper"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../config_bouquet/" class="btn btn-neutral" title="Bouquets"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../status_subscriptions/" class="btn btn-neutral" title="Subscriptions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -741,10 +579,10 @@ options (for this use the external interface).</p>
           <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../config_bouquet/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../status_subscriptions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../config_streamprofile/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../status_servicemapper/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

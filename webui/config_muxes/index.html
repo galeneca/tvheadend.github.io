@@ -52,15 +52,22 @@
         <ul class="current">
           
             <li>
+    <ul class="subnav">
+    <li><span>Introduction</span></li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../..">Home</a>
         
     </li>
-<li>
-          
-            <li>
-    <ul class="subnav">
-    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../todo/">To-do</a>
+        
+    </li>
 
         
             
@@ -72,7 +79,29 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../Before_you_begin/">Before you begin - some basic concepts</a>
+        <a class="" href="../../basic_requirements/">Basic Requirements</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../features/">Features</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../before_you_begin/">Before you begin - some basic concepts</a>
         
     </li>
 
@@ -211,7 +240,15 @@
                 
                     <li><a class="toctree-l4" href="#menu-barbuttons">Menu Bar/Buttons</a></li>
                 
-                    <li><a class="toctree-l4" href="#columns">Columns</a></li>
+                    <li><a class="toctree-l4" href="#grid-items">Grid Items</a></li>
+                
+                    <li><a class="toctree-l4" href="#dvb-ss2-specific-configuration-items-addedit-dialogs-only">DVB-S/S2-Specific Configuration Items (Add/Edit Dialogs Only)</a></li>
+                
+                    <li><a class="toctree-l4" href="#dvb-tt2-specific-configuration-items-addedit-dialogs-only">DVB-T/T2-Specific Configuration Items (Add/Edit Dialogs Only)</a></li>
+                
+                    <li><a class="toctree-l4" href="#dvb-c-specific-configuration-items-addedit-dialogs-only">DVB-C-Specific Configuration Items (Add/Edit Dialogs Only)</a></li>
+                
+                    <li><a class="toctree-l4" href="#iptv-specific-configuration-items-addedit-dialogs-only">IPTV-Specific Configuration Items (Add/Edit Dialogs Only)</a></li>
                 
             
             </ul>
@@ -286,7 +323,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../config_esfilter/">Video Stream Filters</a>
+        <a class="" href="../config_esfilter/">(Various) Stream Filters</a>
         
     </li>
 
@@ -326,6 +363,42 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../config_tvhlog/">Debugging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Status Tab</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_stream/">Stream</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_subscriptions/">Subscriptions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_connections/">Connections</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_servicemapper/">Service Mapper</a>
         
     </li>
 
@@ -457,7 +530,7 @@ so an IP address, in effect.</p>
 </tr>
 <tr>
 <td><strong>Undo</strong></td>
-<td>Undo any changes made to the mux configuration since the last save (changes are marked by a small red triangle).</td>
+<td>Undo any changes made to the mux configuration since the last save.</td>
 </tr>
 <tr>
 <td><strong>Add</strong></td>
@@ -473,7 +546,7 @@ so an IP address, in effect.</p>
 </tr>
 <tr>
 <td><strong>Hide <option></strong></td>
-<td>??????. Options are Parent Disabled, All, None</td>
+<td><font color=red>??????</font>. Options are Parent Disabled, All, None</td>
 </tr>
 <tr>
 <td><strong>Help</strong></td>
@@ -482,8 +555,8 @@ so an IP address, in effect.</p>
 </tbody>
 </table>
 <hr />
-<h4 id="columns">Columns</h4>
-<p>The columns have the following functions:</p>
+<h4 id="grid-items">Grid Items</h4>
+<p>The main grid items have the following functions:</p>
 <p><strong>Play</strong>
 : Downloads a playlist file (M3U or XSPF, depending on your startup
   options) so you can tune to the mux from an external application.</p>
@@ -545,6 +618,11 @@ configuration file)</p>
 : The name of the network to which the mux belongs. Networks are defined
   in <em>Configuration -&gt; DVB Inputs -&gt; Networks</em> - DVB-S or ATSC, for
   example.</p>
+<p><strong>Network UUID</strong>
+: The internal UUID reference for the network to which the mux belongs.</p>
+<p><strong>Name</strong>
+: Short name for the mux - derived from the frequency and polarisation if
+  applicable (e.g. 10788V or 578MHz).</p>
 <p><strong>Original Network ID</strong>
 : The ONID is a code which uniquely identifies a network.</p>
 <p><strong>Transport Stream ID</strong>
@@ -558,6 +636,36 @@ configuration file)</p>
   (PEND) or has reverted to idle scan (IDLE).</p>
 <p><strong>Scan Result</strong>
 : Whether there were any problems with the last scan of this mux.</p>
+<p><strong>Character Set</strong>
+: The character encoding for this mux (e.g. UTF-8).</p>
+<p><strong># Services</strong>
+: The number of services found on this mux.</p>
+<p><strong># Channels</strong>
+: The number of channels mapped to services found on this mux.</p>
+<p><strong>AC-3 Detection</strong>
+: Enables alternative detection methods for AC-3 audio. </p>
+<ul>
+<li>
+<p><strong>Standard</strong>:
+:  The default detection. If unsure, keep it set to this.</p>
+</li>
+<li>
+<p><strong>AC-3 = Descriptor 6</strong>
+:  The empty PMT descriptor 0x06 defaults to the AC-3 stream. Some Chinese
+  cable providers are using this. </p>
+</li>
+<li>
+<p><strong>Ignore descriptor 5</strong>
+:  <font color=red>Text&hellip;</font></p>
+</li>
+</ul>
+<h4 id="dvb-ss2-specific-configuration-items-addedit-dialogs-only">DVB-S/S2-Specific Configuration Items (Add/Edit Dialogs Only)</h4>
+<p><font color=red>Text&hellip;</font></p>
+<h4 id="dvb-tt2-specific-configuration-items-addedit-dialogs-only">DVB-T/T2-Specific Configuration Items (Add/Edit Dialogs Only)</h4>
+<p><font color=red>Text&hellip;</font></p>
+<h4 id="dvb-c-specific-configuration-items-addedit-dialogs-only">DVB-C-Specific Configuration Items (Add/Edit Dialogs Only)</h4>
+<p><font color=red>Text&hellip;</font></p>
+<h4 id="iptv-specific-configuration-items-addedit-dialogs-only">IPTV-Specific Configuration Items (Add/Edit Dialogs Only)</h4>
 <p><strong>URL</strong>
 : Mux URL.</p>
 <ul>
@@ -589,31 +697,27 @@ configuration file)</p>
   termed &ldquo;escaping&rdquo; a character).</p>
 </li>
 </ul>
-<p><strong># Services</strong>
-: The number of services found on this mux.</p>
-<p><strong>Character Set</strong>
-: The character encoding for this mux (e.g. UTF-8).</p>
-<p><strong>PMT Descriptor 0x06 = AC-3</strong>
-: Whether or not the empty PMT descriptor 0x06 defaults to the AC-3
-  stream. Some Chinese cable providers are using this. If unsure, keep
-  this off.</p>
 <p><strong>Interface</strong>
-: IPTV : the network interface/card on which the IPTV source can be found.</p>
+: The network interface/card on which the IPTV source can be found.</p>
 <p><strong>ATSC</strong>
 : Whether or not this is an ATSC IPTV source.</p>
+<p><strong>Mux Name</strong>
+:  <font color=red>Text&hellip;</font></p>
+<p><strong>Service Name</strong>
+:  <font color=red>Text&hellip;</font></p>
 <p><strong>Priority</strong>
-: IPTV : The mux priority value (higher value = higher priority to use
+: The mux priority value (higher value = higher priority to use
   services from this mux). Value 0 means use the IPTV network priority
   value.</p>
 <p><strong>Streaming Priority</strong>
-: IPTV : The mux priority value for streamed channels through HTTP or HTSP
+: The mux priority value for streamed channels through HTTP or HTSP
   (higher value = higher priority to use services from this mux). Value 0
   means use the standard streaming network priority value.</p>
 <p><strong>Environment (pipe)</strong>
-: IPTV : List of environment variables for pipe (like PATH=/bin:/sbin)
+: List of environment variables for pipe (like <code>PATH=/bin:/sbin</code>)
   separated by spaces. The backslash character is handled like in URL.</p>
 <p><strong>Respawn (pipe)</strong>
-: IPTV : Respawn the executed process when it dies.</p>
+: Respawn the executed process when it dies.</p>
               
             </div>
           </div>

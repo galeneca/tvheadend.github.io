@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Install Tvheadend - Tvheadend 4.0</title>
+  <title>Features - Tvheadend 4.0</title>
   
 
   <link rel="shortcut icon" href="../images/favicon.png">
@@ -22,7 +22,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "install_tvheadend"
+    var mkdocs_page_name = "features"
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -85,8 +85,44 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../features/">Features</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Features</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#features-of-tvheadend">Features of Tvheadend</a></li>
+                
+                    <li><a class="toctree-l4" href="#sdtv-and-hdtv-support">SDTV and HDTV support</a></li>
+                
+                    <li><a class="toctree-l4" href="#input-sources">Input Sources</a></li>
+                
+                    <li><a class="toctree-l4" href="#output-targets">Output Targets</a></li>
+                
+                    <li><a class="toctree-l4" href="#transcoding-support">Transcoding Support</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#note-text-required">NOTE: TEXT REQUIRED</a></li>
+                
+                    <li><a class="toctree-l4" href="#digital-video-recorder">Digital Video Recorder</a></li>
+                
+                    <li><a class="toctree-l4" href="#electronic-program-guide">Electronic Program Guide</a></li>
+                
+                    <li><a class="toctree-l4" href="#rich-browser-driven-interface">Rich Browser-Driven Interface</a></li>
+                
+                    <li><a class="toctree-l4" href="#easy-to-configure-and-administer">Easy to Configure and Administer</a></li>
+                
+                    <li><a class="toctree-l4" href="#multi-user-support">Multi-User Support</a></li>
+                
+                    <li><a class="toctree-l4" href="#software-based-csa-descrambling">Software-Based CSA Descrambling</a></li>
+                
+                    <li><a class="toctree-l4" href="#fully-integrated-with-mainstream-media-players">Fully-Integrated with Mainstream Media Players</a></li>
+                
+                    <li><a class="toctree-l4" href="#mobileremote-client-support">Mobile/Remote Client Support</a></li>
+                
+                    <li><a class="toctree-l4" href="#internationalisation">Internationalisation</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -114,23 +150,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Install Tvheadend</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#install-tvheadend">Install Tvheadend</a></li>
-                
-                    <li><a class="toctree-l4" href="#1-install-the-software">1. Install the Software</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#note-stable-vs-unstable-vs-testing-vs-building-from-master">NOTE: STABLE VS UNSTABLE VS TESTING VS BUILDING FROM MASTER...</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#note-need-a-view-on-dreamcats-versions-plus-a-link-on-how-to-compile">NOTE: NEED A VIEW ON DREAMCAT'S VERSIONS PLUS A LINK ON HOW-TO-COMPILE</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../install_tvheadend/">Install Tvheadend</a>
         
     </li>
 
@@ -484,11 +505,11 @@
     
       
         
-          <li>Getting Started &raquo;</li>
+          <li>Introduction &raquo;</li>
         
       
     
-    <li>Install Tvheadend</li>
+    <li>Features</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -502,28 +523,96 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="install-tvheadend">Install Tvheadend</h2>
-<p>This section tells you how to get hold of the software in the first place,
-and how to get it onto your system.</p>
-<h3 id="1-install-the-software">1. Install the Software</h3>
-<p>Follow the instructions that are specific to your Linux distribution
-(Ubuntu/Debian/Mint, Arch, Fedora&hellip;). This will typically be PPA-and-dkpg
-for Debian, but most other distros will need you to build your own version from source.</p>
+                <h2 id="features-of-tvheadend">Features of Tvheadend</h2>
+<h4 id="sdtv-and-hdtv-support">SDTV and HDTV support</h4>
 <ul>
-<li>
-<p><a href="https://tvheadend.org/projects/tvheadend/wiki/AptRepository">Debian/Ubuntu installation instructions</a></p>
-</li>
-<li>
-<p><a href="https://tvheadend.org/projects/tvheadend/wiki/Building">Instructions on how to build from source</a></p>
-</li>
+<li>H.264 (MPEG-4 AVC) and MPEG2 video supported.</li>
+<li>AC-3, AAC and MP2 audio supported.</li>
+<li>DVB subtitles supported.</li>
 </ul>
-<p>Do not assume that your distro&rsquo;s package manager will give you the latest
-version of Tvheadend - indeed, give you any version at all. Always check.</p>
-<p>Where a pre-built package exists, this will usually get you the last official
-stable version. However, more advanced users may be interested in running
-a development version - either a nightly build or a self-compiled version.</p>
-<h2 id="note-stable-vs-unstable-vs-testing-vs-building-from-master">NOTE: <font color=red>STABLE VS UNSTABLE VS TESTING VS BUILDING FROM MASTER&hellip;</font></h2>
-<h2 id="note-need-a-view-on-dreamcats-versions-plus-a-link-on-how-to-compile">NOTE: <font color=red>NEED A VIEW ON DREAMCAT&rsquo;S VERSIONS PLUS A LINK ON HOW-TO-COMPILE</font></h2>
+<h4 id="input-sources">Input Sources</h4>
+<ul>
+<li>Satellite signals via DVB-S and DVB-S2</li>
+<li>Terrestrial/Over-the-Air signals via DVB-T, DVB-T2 and ATSC</li>
+<li>Cable signals via DVB-C</li>
+<li>LAN/IPTV signals such as IPTV, SAT&gt;IP, HDHomeRun</li>
+<li>A general-purpose MPEG-TS <code>pipe://</code> for analogue and non-broadcast sources</li>
+<li>Support for multiple adapters of any mix, with each adapter able to
+receive simultaneously all programmes on the current mux.</li>
+<li>Powerful many-to-many channel:service:tuner mapping that allows you to select
+channels irrespective of the underlying carrier (for channels that broadcast
+on multiple sources). </li>
+</ul>
+<h4 id="output-targets">Output Targets</h4>
+<ul>
+<li>Local or remote disk, via the built-in digital video recorder.</li>
+<li>HTSP (Home TV Streaming Protocol).</li>
+<li>HTTP streaming.</li>
+</ul>
+<h4 id="transcoding-support">Transcoding Support</h4>
+<ul>
+<li>Subject to your system&rsquo;s capabilities, support for on-the-fly transcoding
+for both live and recorded streams</li>
+<li>text</li>
+<li>text</li>
+</ul>
+<h2 id="note-text-required">NOTE: <font color=red>TEXT REQUIRED</font></h2>
+<h4 id="digital-video-recorder">Digital Video Recorder</h4>
+<ul>
+<li>Built in video recorder stores recorded programs as Transport Stream (.ts) or Matroska (.mkv) files.</li>
+<li>Multiple simultaneous recordings are supported.</li>
+<li>All original streams (multiple audio tracks, etc) are recorded.</li>
+<li>Streams can be selected and filtered positively or negatively as required.</li>
+<li>Create rule sets manually or based on EPG queries.</li>
+<li>Multiple DVR profiles that support different target directories, post-processing options, filtering options, etc.</li>
+</ul>
+<h4 id="electronic-program-guide">Electronic Program Guide</h4>
+<ul>
+<li>Rich EPG support, with data from DVB/OTA, XMLTV (scheduled and socket).</li>
+<li>Searchable and filterable from the web user interface.</li>
+<li>Results can be scheduled for recording with a single click.</li>
+</ul>
+<h4 id="rich-browser-driven-interface">Rich Browser-Driven Interface</h4>
+<ul>
+<li>The entire application is loaded into the browser.</li>
+<li>Based on extJS, all pages are dynamic and self-refreshing.</li>
+<li>All sorting/filtering is then done in C by the main application for speed.</li>
+</ul>
+<h4 id="easy-to-configure-and-administer">Easy to Configure and Administer</h4>
+<ul>
+<li>All setup and configuration is done from the built in web user interface.</li>
+<li>All settings are stored in human-readable text files.</li>
+<li>Initial setup can be done by choosing one of the pre-defined <a href="http://git.linuxtv.org/cgit.cgi/dtv-scan-tables.git">linuxtv</a> networks
+or manually configured.</li>
+<li>Idle scanning for automatic detection of muxes and services.</li>
+<li>Support for broadcaster (primarily DVB-S) bouquets for easy channel mapping. </li>
+</ul>
+<h4 id="multi-user-support">Multi-User Support</h4>
+<ul>
+<li>Access to system features (streaming, administration, configurations) can
+be configured based on username/password and/or IP address.</li>
+</ul>
+<h4 id="software-based-csa-descrambling">Software-Based CSA Descrambling</h4>
+<ul>
+<li>Requires a card server (newcamd and capmt protocol is supported).</li>
+</ul>
+<h4 id="fully-integrated-with-mainstream-media-players">Fully-Integrated with Mainstream Media Players</h4>
+<ul>
+<li>Movian and Kodi are the main targets/</li>
+<li>All channel data, channel groups/tages, EPG and TV streaming is carried over a single TCP connection.</li>
+</ul>
+<h4 id="mobileremote-client-support">Mobile/Remote Client Support</h4>
+<ul>
+<li>As well as the web interface, which is accessible through VPN if required, 
+third-party clients are available for both <a href="https://play.google.com/store/apps/details?id=org.tvheadend.tvhclient&amp;hl=en_GB">Android</a>
+and <a href="https://itunes.apple.com/gb/app/tvhclient/id638900112?mt=8">iOS</a> (other
+clients may also be available).</li>
+</ul>
+<h4 id="internationalisation">Internationalisation</h4>
+<ul>
+<li>All text is encoded in UTF-8 to provide full international support.</li>
+<li>All major character encodings in DVB are supported (e.g. for localised EPG character sets).</li>
+</ul>
               
             </div>
           </div>
@@ -531,10 +620,10 @@ a development version - either a nightly build or a self-compiled version.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../configure_tvheadend/" class="btn btn-neutral float-right" title="Configure Tvheadend"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../before_you_begin/" class="btn btn-neutral float-right" title="Before you begin - some basic concepts"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../install_tuner_hardware/" class="btn btn-neutral" title="Install your tuner hardware"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../basic_requirements/" class="btn btn-neutral" title="Basic Requirements"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -563,10 +652,10 @@ a development version - either a nightly build or a self-compiled version.</p>
           <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../install_tuner_hardware/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../basic_requirements/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../configure_tvheadend/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../before_you_begin/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

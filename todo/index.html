@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Install Tvheadend - Tvheadend 4.0</title>
+  <title>To-do - Tvheadend 4.0</title>
   
 
   <link rel="shortcut icon" href="../images/favicon.png">
@@ -22,7 +22,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "install_tvheadend"
+    var mkdocs_page_name = "todo"
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -64,8 +64,15 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../todo/">To-do</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">To-do</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#things-to-do-on-this-guide">Things To Do on This Guide...</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -114,23 +121,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Install Tvheadend</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#install-tvheadend">Install Tvheadend</a></li>
-                
-                    <li><a class="toctree-l4" href="#1-install-the-software">1. Install the Software</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#note-stable-vs-unstable-vs-testing-vs-building-from-master">NOTE: STABLE VS UNSTABLE VS TESTING VS BUILDING FROM MASTER...</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#note-need-a-view-on-dreamcats-versions-plus-a-link-on-how-to-compile">NOTE: NEED A VIEW ON DREAMCAT'S VERSIONS PLUS A LINK ON HOW-TO-COMPILE</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../install_tvheadend/">Install Tvheadend</a>
         
     </li>
 
@@ -484,11 +476,11 @@
     
       
         
-          <li>Getting Started &raquo;</li>
+          <li>Introduction &raquo;</li>
         
       
     
-    <li>Install Tvheadend</li>
+    <li>To-do</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -502,28 +494,81 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="install-tvheadend">Install Tvheadend</h2>
-<p>This section tells you how to get hold of the software in the first place,
-and how to get it onto your system.</p>
-<h3 id="1-install-the-software">1. Install the Software</h3>
-<p>Follow the instructions that are specific to your Linux distribution
-(Ubuntu/Debian/Mint, Arch, Fedora&hellip;). This will typically be PPA-and-dkpg
-for Debian, but most other distros will need you to build your own version from source.</p>
+                <h2 id="things-to-do-on-this-guide">Things To Do on This Guide&hellip;</h2>
+<div class="admonition note">
+<p class="admonition-title">Work-in-progress notes</p>
+<p>These are not part of the final product, obviously!<br><br>They're just some
+of the areas I'm aware of that we need to close off before release</p>
+</div>
+
+<ol>
+<li>
+<p>Replace all current screenshots with up-to-date, consistent, readable images (suitable for webUI and User Guide)</p>
+</li>
+<li>
+<p>Minor file renaming to improve consistency (e.g. config_misc shoudl be config_general)</p>
+</li>
+<li>
+<p>Embed png icons for clock/record/etc. (check CSS - inline img versus block - might need to tag them specifically)</p>
+</li>
+<li>
+<p>Once 99% complete, generate new webUI help pages and push them to the tvheadend repo</p>
+</li>
+<li>
+<p>Check all link from tvh (e.g. there are no help buttons on the &lsquo;Stream&rsquo; tabs)</p>
+</li>
+<li>
+<p>Might be worth taking a few specific screenshots of dialog boxes</p>
+</li>
+<li>
+<p>Check non-univeral (i.e. item-specific) configuration items (e.g. the IPTV mux parameters) and make sure they&rsquo;re documented</p>
+</li>
+<li>
+<p>Obviously, fill in the minor gaps as highlighted in the document: buttons, descriptions, etc.</p>
+</li>
+<li>
+<p>Regenerate everything as soon as mkdocs 0.14 hits the streets - copyright on template footers, collapsible menus (perhaps), search bug fixed</p>
+</li>
+</ol>
+<p>The following major content items/chapters are then missing - based on most FAQs on the forum:</p>
 <ul>
 <li>
-<p><a href="https://tvheadend.org/projects/tvheadend/wiki/AptRepository">Debian/Ubuntu installation instructions</a></p>
+<p>Transcoding</p>
 </li>
 <li>
-<p><a href="https://tvheadend.org/projects/tvheadend/wiki/Building">Instructions on how to build from source</a></p>
+<p>How to configure a recording</p>
+</li>
+<li>
+<p>How to watch Live TV</p>
+</li>
+<li>
+<p>How to set up card sharing?</p>
+</li>
+<li>
+<p>How to set up a multi-profile installation (access)</p>
+</li>
+<li>
+<p>How to compile/install on <insert your distro here></p>
+</li>
+<li>
+<p>Setting up SAT&gt;IP - as a client, as a server</p>
+</li>
+<li>
+<p>Platform differences - what you need to transcode, or what you can expect from Android vs GNU/Linux</p>
 </li>
 </ul>
-<p>Do not assume that your distro&rsquo;s package manager will give you the latest
-version of Tvheadend - indeed, give you any version at all. Always check.</p>
-<p>Where a pre-built package exists, this will usually get you the last official
-stable version. However, more advanced users may be interested in running
-a development version - either a nightly build or a self-compiled version.</p>
-<h2 id="note-stable-vs-unstable-vs-testing-vs-building-from-master">NOTE: <font color=red>STABLE VS UNSTABLE VS TESTING VS BUILDING FROM MASTER&hellip;</font></h2>
-<h2 id="note-need-a-view-on-dreamcats-versions-plus-a-link-on-how-to-compile">NOTE: <font color=red>NEED A VIEW ON DREAMCAT&rsquo;S VERSIONS PLUS A LINK ON HOW-TO-COMPILE</font></h2>
+<p>And I&rsquo;m left with these final open questions:</p>
+<ul>
+<li>
+<p>We need the webUI pages documented (as they are). How much should they be the how-tos, and how much should these be separate?</p>
+</li>
+<li>
+<p>How deep do we want to (need to) get into setting up tuners - that&rsquo;s a constant source of woe for people?</p>
+</li>
+<li>
+<p>If we do all the above, do we need the FAQ pages? Check existing manual/guide</p>
+</li>
+</ul>
               
             </div>
           </div>
@@ -531,10 +576,10 @@ a development version - either a nightly build or a self-compiled version.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../configure_tvheadend/" class="btn btn-neutral float-right" title="Configure Tvheadend"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../overview/" class="btn btn-neutral float-right" title="Overview"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../install_tuner_hardware/" class="btn btn-neutral" title="Install your tuner hardware"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -563,10 +608,10 @@ a development version - either a nightly build or a self-compiled version.</p>
           <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../install_tuner_hardware/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../configure_tvheadend/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../overview/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

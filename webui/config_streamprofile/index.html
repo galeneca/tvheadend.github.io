@@ -52,15 +52,22 @@
         <ul class="current">
           
             <li>
+    <ul class="subnav">
+    <li><span>Introduction</span></li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../..">Home</a>
         
     </li>
-<li>
-          
-            <li>
-    <ul class="subnav">
-    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../todo/">To-do</a>
+        
+    </li>
 
         
             
@@ -72,7 +79,29 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../Before_you_begin/">Before you begin - some basic concepts</a>
+        <a class="" href="../../basic_requirements/">Basic Requirements</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../features/">Features</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../before_you_begin/">Before you begin - some basic concepts</a>
         
     </li>
 
@@ -274,9 +303,15 @@
             
                 <li class="toctree-l3"><a href="#configuration-stream-stream-profile">Configuration - Stream - Stream Profile</a></li>
                 
+            
+                <li class="toctree-l3"><a href="#note-intro-text-required">NOTE: INTRO TEXT REQUIRED</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#note-screenshot-required">NOTE: SCREENSHOT REQUIRED</a></li>
+                
                     <li><a class="toctree-l4" href="#menu-barbuttons">Menu Bar/Buttons</a></li>
                 
-                    <li><a class="toctree-l4" href="#columns">Columns</a></li>
+                    <li><a class="toctree-l4" href="#configuration-options">Configuration Options</a></li>
                 
                     <li><a class="toctree-l4" href="#stream-profile-types">Stream Profile Types</a></li>
                 
@@ -290,7 +325,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../config_esfilter/">Video Stream Filters</a>
+        <a class="" href="../config_esfilter/">(Various) Stream Filters</a>
         
     </li>
 
@@ -330,6 +365,42 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../config_tvhlog/">Debugging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Status Tab</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_stream/">Stream</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_subscriptions/">Subscriptions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_connections/">Connections</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_servicemapper/">Service Mapper</a>
         
     </li>
 
@@ -438,6 +509,8 @@
             <div class="section">
               
                 <h2 id="configuration-stream-stream-profile">Configuration - Stream - Stream Profile</h2>
+<h2 id="note-intro-text-required">NOTE: <font color=red>INTRO TEXT REQUIRED</font></h2>
+<h2 id="note-screenshot-required">NOTE: <font color=red>SCREENSHOT REQUIRED</font></h2>
 <hr />
 <h4 id="menu-barbuttons">Menu Bar/Buttons</h4>
 <p>The following functions are available:</p>
@@ -450,55 +523,58 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Add</strong></td>
-<td>Add a new profile. You can choose from any of the types from the list.</td>
-</tr>
-<tr>
-<td><strong>Delete</strong></td>
-<td>Delete an existing profile.</td>
-</tr>
-<tr>
 <td><strong>Save</strong></td>
-<td>Saves any changes.</td>
+<td>Save any changes made to the stream profile configuration.</td>
 </tr>
 <tr>
 <td><strong>Undo</strong></td>
-<td>Undoes any changes.</td>
+<td>Undo any changes made to the stream profile configuration since the last save.</td>
+</tr>
+<tr>
+<td><strong>Add</strong></td>
+<td>Add a new stream profile.</td>
+</tr>
+<tr>
+<td><strong>Delete</strong></td>
+<td>Delete an existing stream profile.</td>
+</tr>
+<tr>
+<td><strong>Help</strong></td>
+<td>Display this help page.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h4 id="columns">Columns</h4>
-<p>The columns have the following functions:</p>
+<h4 id="configuration-options">Configuration Options</h4>
 <h4 id="stream-profile-types">Stream Profile Types</h4>
 <p><strong>MPEG-TS Pass-through /build-in</strong>
-:   MPEG-TS pass through muxer (built-in)</p>
+: MPEG-TS pass through muxer (built-in)</p>
 <p><strong>Matroska (mkv) /build-in</strong>
-:   Matroska/WebM muxer (built-in)</p>
+: Matroska/WebM muxer (built-in)</p>
 <p><strong>HTSP Stream Profile</strong>
-:   HTSP Default Stream Settings</p>
+: HTSP Default Stream Settings</p>
 <p><strong>MPEG-TS /av-lib</strong>
-:   MPEG-TS stream muxer (libav)</p>
+: MPEG-TS stream muxer (libav)</p>
 <p><strong>Matroska /av-lib</strong>
-:   Matroska/WebM muxer (libav)</p>
+: Matroska/WebM muxer (libav)</p>
 <p><strong>Transcode /av-lib</strong>
-:   Transcode video/audio/subtitles to different codecs and containers</p>
+: Transcode video/audio/subtitles to different codecs and containers</p>
 <h4 id="transcoding-settings">Transcoding Settings</h4>
 <p><strong>Container</strong>
-:   Container to use for transcoded streams.</p>
+: Container to use for transcoded streams.</p>
 <p><strong>Resolution</strong>
-:   Vertical resolution (height) of the output video stream. Horizontal resolution
-    is adjusted automatically to preserve aspect ratio.</p>
+: Vertical resolution (height) of the output video stream. Horizontal resolution
+  is adjusted automatically to preserve aspect ratio.</p>
 <p><strong>Channels</strong>
-:   Channel layout for audio streams.</p>
+: Channel layout for audio streams.</p>
 <p><strong>Language</strong>
-:   Currently unused.</p>
+: Currently unused.</p>
 <p><strong>Video Codec</strong>
-:   Codec for video stream.</p>
+: Codec for video stream.</p>
 <ul>
 <li>
 <p><strong>Do not use</strong>
-:   Don&rsquo;t output a video stream.</p>
+: Don&rsquo;t output a video stream.</p>
 </li>
 <li>
 <p><strong>Copy codec type</strong>
@@ -506,51 +582,51 @@
 </li>
 </ul>
 <p><strong>Video Bitrate</strong>
-:   Video quality/bitrate of the transcoded video stream.</p>
+: Video quality/bitrate of the transcoded video stream.</p>
 <ul>
 <li>
 <p><strong>0: Automatic Setting (target quality)</strong>
-:   The automatic setting is dependent on the used codec. The respective
-    values used, are 5 for MPEG2 and 15 for H.264 and VP8.</p>
+: The automatic setting is dependent on the used codec. The respective
+  values used, are 5 for MPEG2 and 15 for H.264 and VP8.</p>
 </li>
 <li>
 <p><strong>1-63: Target Quality</strong>
-:   Use the given value to achieve average quality. A lower value results
-    in better quality. The resulting bitrate is dependent on the complexity
-    of the video stream.</p>
+: Use the given value to achieve average quality. A lower value results
+  in better quality. The resulting bitrate is dependent on the complexity
+  of the video stream.</p>
 </li>
 <li>
 <p><strong>&gt;63: Target Bitrate</strong>
-:   Use the given value to achieve average bitrate. The resulting quality
-    is dependent on the complexity of the video stream.</p>
+: Use the given value to achieve average bitrate. The resulting quality
+  is dependent on the complexity of the video stream.</p>
 </li>
 </ul>
 <p><strong>Audio Codec</strong>
-:    Codec for audio streams.</p>
+: Codec for audio streams.</p>
 <ul>
 <li>
 <p><strong>Do not use</strong>
-:    Don&rsquo;t output an audio stream.</p>
+: Don&rsquo;t output an audio stream.</p>
 </li>
 <li>
 <p><strong>Copy codec type</strong>
-:    Pass through audio streams without transcoding.</p>
+: Pass through audio streams without transcoding.</p>
 </li>
 <li>
 <p><strong>Audio Bitrate</strong>
-:    Audio bitrate of the transcoded audio streams.</p>
+: Audio bitrate of the transcoded audio streams.</p>
 </li>
 </ul>
 <p><strong>Subtitles Codec</strong>
-:    Codec for subtitles.</p>
+: Codec for subtitles.</p>
 <ul>
 <li>
 <p><strong>Do not use</strong>
-:    Don&rsquo;t output subtitles.</dd></p>
+: Don&rsquo;t output subtitles.</p>
 </li>
 <li>
 <p><strong>Copy codec type</strong>
-:    Pass through subtitles without transcoding.</p>
+: Pass through subtitles without transcoding.</p>
 </li>
 </ul>
               
@@ -560,7 +636,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../config_esfilter/" class="btn btn-neutral float-right" title="Video Stream Filters"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../config_esfilter/" class="btn btn-neutral float-right" title="(Various) Stream Filters"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../config_epggrab/" class="btn btn-neutral" title="EPG Grabber"><span class="icon icon-circle-arrow-left"></span> Previous</a>

@@ -52,15 +52,22 @@
         <ul class="current">
           
             <li>
+    <ul class="subnav">
+    <li><span>Introduction</span></li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="..">Home</a>
         
     </li>
-<li>
-          
-            <li>
-    <ul class="subnav">
-    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../todo/">To-do</a>
+        
+    </li>
 
         
             
@@ -73,7 +80,8 @@
                 
                     <li><a class="toctree-l4" href="#welcome-to-tvheadend">Welcome to Tvheadend!</a></li>
                 
-                    <li><a class="toctree-l4" href="#basic-requirements">Basic Requirements</a></li>
+            
+                <li class="toctree-l3"><a href="#note-overall-screenshot-required">NOTE: OVERALL SCREENSHOT REQUIRED</a></li>
                 
             
             </ul>
@@ -83,7 +91,29 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Before_you_begin/">Before you begin - some basic concepts</a>
+        <a class="" href="../basic_requirements/">Basic Requirements</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../features/">Features</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../before_you_begin/">Before you begin - some basic concepts</a>
         
     </li>
 
@@ -286,7 +316,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../webui/config_esfilter/">Video Stream Filters</a>
+        <a class="" href="../webui/config_esfilter/">(Various) Stream Filters</a>
         
     </li>
 
@@ -326,6 +356,42 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../webui/config_tvhlog/">Debugging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Status Tab</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/status_stream/">Stream</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/status_subscriptions/">Subscriptions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/status_connections/">Connections</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/status_servicemapper/">Service Mapper</a>
         
     </li>
 
@@ -415,7 +481,7 @@
     
       
         
-          <li>Getting Started &raquo;</li>
+          <li>Introduction &raquo;</li>
         
       
     
@@ -435,40 +501,27 @@
               
                 <h2 id="overview-of-tvheadend">Overview of Tvheadend</h2>
 <h3 id="welcome-to-tvheadend">Welcome to Tvheadend!</h3>
-<p>Tvheadend is a lightweight, easily-configured, general-purpose TV/video streaming server and recorder (PVR/DVR) for GNU/Linux, FreeBSD and Android. It supports input from:</p>
+<p>Tvheadend is a lightweight, easily-configured, general-purpose TV/video 
+streaming server and recorder (PVR/DVR) for GNU/Linux, FreeBSD and Android.
+It supports input from:</p>
 <ul>
-<li><strong>Satellite</strong>: DVB-S, DVB-S2</li>
-<li><strong>Cable</strong>: DVB-C</li>
-<li><strong>Terrestrial/OTA</strong>: DVB-T, ATSC</li>
-<li><strong>LAN</strong>: IPTV, SAT&gt;IP, HDHomeRun and general-purpose MPEG-TS <em>pipe://</em></li>
+<li>Cable TV, delivered via a cable to your house (DVB-C)</li>
+<li>Satellite, so any signal coming in via a dish (DVB-S and DVB-S2)</li>
+<li>Terrestrial, so over-the-air broadcasts received through a
+traditional television aerial (DVB-T and DVB-T2 in much of the world, ATSC
+in north and central America)</li>
+<li>Internet and LAN feeds, such as IPTV, SAT&gt;IP, HDHomeRun and a general-purpose
+MPEG-TS <code>pipe://</code></li>
 </ul>
-<p>As well as being able to record the input, Tvheadend also offers it up to client applications via HTTP (VLC, MPlayer), HTSP (Kodi, Movian) and SAT&gt;IP streaming.</p>
-<p>Analogue video (V4L) was supported directly in previous versions of Tvheadend, up to version 3.4. However, due to the death of analogue signals in many places, this has now been deprecated.</p>
-<p>Instead, in recent versions, you can use a pipe:// source to input an analogue signal that&rsquo;s been exterally remuxed into MPEG-TS (e.g. with ffmpeg/libav from a V4L device). You can also use this to input signals from video cameras and other non-broadcast sources. Please see the user guide for more information.</p>
+<p>As well as being able to record the input, Tvheadend also offers it up to
+client applications via HTTP (VLC, MPlayer), HTSP (Kodi, Movian) and SAT&gt;IP
+streaming.</p>
+<h2 id="note-overall-screenshot-required">NOTE: <font color=red>OVERALL SCREENSHOT REQUIRED</font></h2>
+<p>While supported in previous versions, analogue video (V4L) is no longer
+supported directly. If you still need this, or need to input signals
+from video cameras or other non-broadcast sources, use <code>pipe://</code>.</p>
 <p>The code is hosted at <a href="https://github.com/tvheadend/tvheadend">github</a>.
 Please use github&rsquo;s features if you want to provide patches. Contributions and improvements are always welcome.</p>
-<h3 id="basic-requirements">Basic Requirements</h3>
-<p>Tvheadend runs on <strong>Linux</strong> - pre-built binaries are available for most 
-Debian-based distributions (Debian itself, Ubuntu, Mint&hellip;) and RPMs for
-Fedora.</p>
-<p>You will only need <strong>c. 30MB disk space</strong> for the application and associated
-files, and maybe anything up to <strong>1GB</strong> for your configuration - depending on 
-how many tuners of what type you have, how many channels you receive, your
-choice of programme guide, and so on. You&rsquo;ll clearly need much more for
-your recordings, though: as a guide, an hour of SD MPEG-2 video will take
-about 1GB, while high bitrate HD H.264 will easily consume 5GB+ per hour.</p>
-<p>Tvheadend is intended to be lightweight, so it will run on a NAS or similar
-<strong>low-powered CPU</strong>. Note that the exception here is transcoding: if you want
-to convert high-definition video in real time then you will need a powerful,
-multi-core system. It will happily run in less than <strong>1GB of RAM</strong>, and many
-people run it successfully on original Raspberry Pis with perhaps only 256MB
-of usable free memory. This does depend on what else you&rsquo;re using the computer
-for, though, as a GUI will drain your system as will any serious file serving.</p>
-<p>And, of course, you&rsquo;ll need one or more <strong>TV tuners</strong> if you want to receive
-regular broadcast television - otherwise, you&rsquo;re limited to IP sources.</p>
-<p>It&rsquo;s perfectly possible to install and run Tvheadend as a single-seat installation,
-with the software running on the same system as any client software (e.g. Kodi),
-with all files stored locally.</p>
               
             </div>
           </div>
@@ -476,10 +529,10 @@ with all files stored locally.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Before_you_begin/" class="btn btn-neutral float-right" title="Before you begin - some basic concepts"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../basic_requirements/" class="btn btn-neutral float-right" title="Basic Requirements"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../todo/" class="btn btn-neutral" title="To-do"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -508,10 +561,10 @@ with all files stored locally.</p>
           <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../todo/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../Before_you_begin/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../basic_requirements/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

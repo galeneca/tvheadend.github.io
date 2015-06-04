@@ -52,15 +52,22 @@
         <ul class="current">
           
             <li>
+    <ul class="subnav">
+    <li><span>Introduction</span></li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../..">Home</a>
         
     </li>
-<li>
-          
-            <li>
-    <ul class="subnav">
-    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../todo/">To-do</a>
+        
+    </li>
 
         
             
@@ -72,7 +79,29 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../Before_you_begin/">Before you begin - some basic concepts</a>
+        <a class="" href="../../basic_requirements/">Basic Requirements</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../features/">Features</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../before_you_begin/">Before you begin - some basic concepts</a>
         
     </li>
 
@@ -247,7 +276,7 @@
                 
                     <li><a class="toctree-l4" href="#menu-barbuttons">Menu Bar/Buttons</a></li>
                 
-                    <li><a class="toctree-l4" href="#columns">Columns</a></li>
+                    <li><a class="toctree-l4" href="#grid-items">Grid Items</a></li>
                 
             
             </ul>
@@ -286,7 +315,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../config_esfilter/">Video Stream Filters</a>
+        <a class="" href="../config_esfilter/">(Various) Stream Filters</a>
         
     </li>
 
@@ -326,6 +355,42 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../config_tvhlog/">Debugging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Status Tab</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_stream/">Stream</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_subscriptions/">Subscriptions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_connections/">Connections</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_servicemapper/">Service Mapper</a>
         
     </li>
 
@@ -435,44 +500,10 @@
               
                 <h2 id="configuration-channelepg-channel-tags">Configuration - Channel/EPG - Channel Tags</h2>
 <p>This tab is used to configure channel tags. Tags are used to define a
-set of channels. Notice that nothing prohibits a channel to be a member
-of multiple tags. </p>
+set of channels - to group them, to aid searches, and similar. Tags are not
+required by Tvheadend itself, but are useful in media applications such
+as Kodi and are a requirement for using Tvheadend with Movian.</p>
 <p><img alt="'Channel Tags' Tab" src="../docresources/tagstab.png" /></p>
-<hr />
-<p>The tag-sets are used for:</p>
-<ul>
-<li>
-<p>Searches in the EPG.</p>
-</li>
-<li>
-<p>Display of channel groups in Kodi, Movian and similar.</p>
-</li>
-</ul>
-<p>Note that there is no requirement to use tags for Tvheadend itself, but they
-are required for Movian. Using tags also simplifies sorting/filtering your
-channels on the Tvheadend web interface and in tag-aware applications such as Kodi</p>
-<p>The tags are listed / edited in a grid.</p>
-<ul>
-<li>
-<p>To edit a cell, double click on it. After a cell is changed it will
-  flags one of its corner to red to indicated that it has been
-  changed. To commit these changes back to Tvheadend press the ‘Save
-  changes’ button. In order to change a Checkbox cell you only have to
-  click once in it.</p>
-</li>
-<li>
-<p>To add a new entry, press the ‘Add entry’ button. The new (empty)
-  entry will be created on the server but will not be in its enabled
-  state. You can now change all the cells to the desired values, check
-  the ‘enable’ box and then press ‘Save changes’ to activate the new
-  entry.</p>
-</li>
-<li>
-<p>To delete one or more entries, select the lines (by clicking once on
-  them), and press the ‘Delete selected’ button. A pop up will ask you
-  to confirm your request.</p>
-</li>
-</ul>
 <hr />
 <h4 id="menu-barbuttons">Menu Bar/Buttons</h4>
 <p>The following functions are available:</p>
@@ -485,22 +516,34 @@ channels on the Tvheadend web interface and in tag-aware applications such as Ko
 </thead>
 <tbody>
 <tr>
-<td><strong>Add entry</strong></td>
-<td></td>
+<td><strong>Save</strong></td>
+<td>Save any changes made to the tag configuration.</td>
 </tr>
 <tr>
-<td><strong>Delete selected</strong></td>
-<td></td>
+<td><strong>Undo</strong></td>
+<td>Undo any changes made to the tag configuration since the last save.</td>
 </tr>
 <tr>
-<td><strong>Save changes</strong></td>
-<td></td>
+<td><strong>Add</strong></td>
+<td>Add a new tag.</td>
+</tr>
+<tr>
+<td><strong>Delete</strong></td>
+<td>Delete an existing tag.</td>
+</tr>
+<tr>
+<td><strong>Edit</strong></td>
+<td>Edit an existing tag. This allows you to change any of the parameters you’d otherwise set when adding a new channel, e.g. internal/private status, icon, etc.</td>
+</tr>
+<tr>
+<td><strong>Help</strong></td>
+<td>Displays this help page.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h4 id="columns">Columns</h4>
-<p>The columns have the following functions:</p>
+<h4 id="grid-items">Grid Items</h4>
+<p>The main grid items have the following functions:</p>
 <p><strong>Enabled</strong>
 : Make the tag available in the rest of the system. If the tag is not
   enabled it is only presented in this grid for the administrator.</p>

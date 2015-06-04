@@ -52,15 +52,22 @@
         <ul class="current">
           
             <li>
+    <ul class="subnav">
+    <li><span>Introduction</span></li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../..">Home</a>
         
     </li>
-<li>
-          
-            <li>
-    <ul class="subnav">
-    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../todo/">To-do</a>
+        
+    </li>
 
         
             
@@ -72,7 +79,29 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../Before_you_begin/">Before you begin - some basic concepts</a>
+        <a class="" href="../../basic_requirements/">Basic Requirements</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../features/">Features</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../before_you_begin/">Before you begin - some basic concepts</a>
         
     </li>
 
@@ -135,9 +164,10 @@
                 
                     <li><a class="toctree-l4" href="#menu-barbuttons">Menu Bar/Buttons</a></li>
                 
-                    <li><a class="toctree-l4" href="#columns">Columns</a></li>
+                    <li><a class="toctree-l4" href="#grid-items">Grid Items</a></li>
                 
-                    <li><a class="toctree-l4" href="#editors-note-insert-links-to-icon-pngs-paths-are-a-problem">EDITOR'S NOTE: INSERT LINKS TO ICON PNGS? (PATHS ARE A PROBLEM...)</a></li>
+            
+                <li class="toctree-l3"><a href="#note-insert-links-to-icon-pngs-paths-are-a-problem">NOTE: INSERT LINKS TO ICON PNGS? (PATHS ARE A PROBLEM...)</a></li>
                 
             
             </ul>
@@ -288,7 +318,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../config_esfilter/">Video Stream Filters</a>
+        <a class="" href="../config_esfilter/">(Various) Stream Filters</a>
         
     </li>
 
@@ -328,6 +358,42 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../config_tvhlog/">Debugging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Status Tab</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_stream/">Stream</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_subscriptions/">Subscriptions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_connections/">Connections</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_servicemapper/">Service Mapper</a>
         
     </li>
 
@@ -455,7 +521,7 @@
 </tr>
 <tr>
 <td><strong>Undo</strong></td>
-<td>Undo any changes made since the last save (changes are marked by a small red triangle).</td>
+<td>Undo any changes made since the last save.</td>
 </tr>
 <tr>
 <td><strong>Add</strong></td>
@@ -480,8 +546,8 @@
 </tbody>
 </table>
 <hr />
-<h4 id="columns">Columns</h4>
-<p>The columns have the following functions. Icons are:</p>
+<h4 id="grid-items">Grid Items</h4>
+<p>The main grid items have the following functions:</p>
 <p><strong>Details</strong>
 : Shows the status of the recording event:</p>
 <ul>
@@ -497,13 +563,17 @@
 (upcoming or current).</p>
 </li>
 </ul>
-<h4 id="editors-note-insert-links-to-icon-pngs-paths-are-a-problem">EDITOR&rsquo;S NOTE: INSERT LINKS TO ICON PNGS? (PATHS ARE A PROBLEM&hellip;)</h4>
+<h2 id="note-insert-links-to-icon-pngs-paths-are-a-problem">NOTE: <font color=red>INSERT LINKS TO ICON PNGS? (PATHS ARE A PROBLEM&hellip;)</font></h2>
 <p><img alt="Detailed Recording Information" src="../docresources/upcomingrecordings2.png" /></p>
+<p><strong>Rerun Of</strong>
+: <font color=red>Text&hellip;</font></p>
 <p><strong>Title</strong>
 : The title (name) of the recording. While this is copied from the EPG
 when you create a recording, it’s not used to match the event itself and
 is thus used here as the name of the event (see also: adding an event
 manually with the <strong>Add</strong> button).</p>
+<p><strong>Subtitle</strong>
+: <font color=red>Text&hellip;</font></p>
 <p><strong>Episode</strong>
 : The episode number of the recording (whether this is available depends
 on your broadcaster and/or EPG data source).</p>
@@ -522,8 +592,12 @@ recording five minutes after the EPG stop time”).</p>
 <p><strong>Duration</strong>
 : The total duration of the scheduled recording, including any extra time
 before or after.</p>
-<p><strong>Channel Name</strong>
+<p><strong>File Size</strong>
+: <font color=red>Text&hellip;</font></p>
+<p><strong>Channel</strong>
 : The channel to be recorded.</p>
+<p><strong>Owner</strong>
+: <font color=red>Text&hellip;</font></p>
 <p><strong>Creator</strong>
 : The user who created the recording or the auto-recording source and IP
 address if scheduled by a matching rule.</p>
@@ -531,6 +605,12 @@ address if scheduled by a matching rule.</p>
 : The DVR configuration to be used for this recording.</p>
 <p><strong>Schedule Status</strong>
 : The status of the recording (scheduled or recording).</p>
+<p><strong>Errors</strong>
+: <font color=red>Text&hellip;</font></p>
+<p><strong>Data Errors</strong>
+: <font color=red>Text&hellip;</font></p>
+<p><strong>Comment</strong>
+: <font color=red>Text&hellip;</font></p>
               
             </div>
           </div>

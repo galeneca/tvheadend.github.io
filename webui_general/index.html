@@ -52,15 +52,22 @@
         <ul class="current">
           
             <li>
+    <ul class="subnav">
+    <li><span>Introduction</span></li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="..">Home</a>
         
     </li>
-<li>
-          
-            <li>
-    <ul class="subnav">
-    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../todo/">To-do</a>
+        
+    </li>
 
         
             
@@ -72,7 +79,29 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Before_you_begin/">Before you begin - some basic concepts</a>
+        <a class="" href="../basic_requirements/">Basic Requirements</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../features/">Features</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../before_you_begin/">Before you begin - some basic concepts</a>
         
     </li>
 
@@ -288,7 +317,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../webui/config_esfilter/">Video Stream Filters</a>
+        <a class="" href="../webui/config_esfilter/">(Various) Stream Filters</a>
         
     </li>
 
@@ -328,6 +357,42 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../webui/config_tvhlog/">Debugging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Status Tab</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/status_stream/">Stream</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/status_subscriptions/">Subscriptions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/status_connections/">Connections</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webui/status_servicemapper/">Service Mapper</a>
         
     </li>
 
@@ -446,6 +511,13 @@ items for a particular topic are below that).</p>
 <p>Each tab is then typically laid out with a menu bar across the top that
 provides access to Add/Save/Edit-type functions, and a grid like a spreadsheet
 below that. The grid items are frequently editable.</p>
+<p>Most configuration items - certainly the ones that are common to all types
+of item covered by that tab - are in this grid. However, some item-specific
+configuraiton items are then only available through the <em>Add</em> and <em>Edit</em>
+dialog boxes. For example, the main network configuration tab grid covers
+parameters common to DVB-S, -T, -C and IPTV networks, but specific things
+such as FEC rolloff or mux URL are then only in the dialogs for networks
+that need these values.</p>
 <h4 id="displaying-and-manipulating-columns">Displaying and Manipulating Columns</h4>
 <ul>
 <li>

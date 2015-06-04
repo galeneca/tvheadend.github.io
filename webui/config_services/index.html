@@ -52,15 +52,22 @@
         <ul class="current">
           
             <li>
+    <ul class="subnav">
+    <li><span>Introduction</span></li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../..">Home</a>
         
     </li>
-<li>
-          
-            <li>
-    <ul class="subnav">
-    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../todo/">To-do</a>
+        
+    </li>
 
         
             
@@ -72,7 +79,29 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../Before_you_begin/">Before you begin - some basic concepts</a>
+        <a class="" href="../../basic_requirements/">Basic Requirements</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../features/">Features</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../before_you_begin/">Before you begin - some basic concepts</a>
         
     </li>
 
@@ -218,7 +247,7 @@
                 
                     <li><a class="toctree-l4" href="#menu-barbuttons">Menu Bar/Buttons</a></li>
                 
-                    <li><a class="toctree-l4" href="#columns">Columns</a></li>
+                    <li><a class="toctree-l4" href="#grid-items">Grid Items</a></li>
                 
             
             </ul>
@@ -286,7 +315,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../config_esfilter/">Video Stream Filters</a>
+        <a class="" href="../config_esfilter/">(Various) Stream Filters</a>
         
     </li>
 
@@ -326,6 +355,42 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../config_tvhlog/">Debugging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Status Tab</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_stream/">Stream</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_subscriptions/">Subscriptions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_connections/">Connections</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_servicemapper/">Service Mapper</a>
         
     </li>
 
@@ -454,7 +519,7 @@ Channels.</p>
 </tr>
 <tr>
 <td><strong>Undo</strong></td>
-<td>Undo any changes made to the services since the last save (changes are marked by a small red triangle).</td>
+<td>Undo any changes made to the services since the last save.</td>
 </tr>
 <tr>
 <td><strong>Delete</strong></td>
@@ -466,7 +531,7 @@ Channels.</p>
 </tr>
 <tr>
 <td><strong>Hide <option></strong></td>
-<td>??????. Options are Parent Disabled, All, None</td>
+<td><font color=red>??????</font>. Options are Parent Disabled, All, None</td>
 </tr>
 <tr>
 <td><strong>Map all</strong></td>
@@ -479,8 +544,8 @@ Channels.</p>
 </tbody>
 </table>
 <hr />
-<h4 id="columns">Columns</h4>
-<p>The columns have the following functions:</p>
+<h4 id="grid-items">Grid Items</h4>
+<p>The main grid items have the following functions:</p>
 <p><strong>Play</strong>
 : Opens a playlist (M3U of XSPF, depending on your startup options) to
   allow you to stream this service to another application, e.g. to watch a
@@ -490,11 +555,15 @@ Channels.</p>
   languages, etc.</p>
 <p><strong>Enabled</strong>
 : Whether or not this service is available for use</p>
+<p><strong>Channel</strong>
+:  <font color=red>Text&hellip;</font></p>
+<p><strong>Service Name</strong>
+:  <font color=red>Text&hellip;</font></p>
 <p><strong>Automatic Checking</strong>
 : Check for the service presence. If service is no longer broadcasted,
   this field will become as “Missing In PAT/SDT”. The check can be also
   disabled for given service using this column.</p>
-<p><strong>Priority</strong>
+<p><strong>Priority (1-10)</strong>
 : Define priority (range 0-10) for this service. The higher value means
   more preferred. Note that this value is _added_ to the input (tuner)
   priority. Take this in account when you set the input priorities.</p>
@@ -504,16 +573,24 @@ Channels.</p>
 : The name of the service, detected when the service was discovered</p>
 <p><strong>Encrypted</strong>
 : Whether or not the service is scrambled</p>
+<p><strong>CAID</strong>
+:  <font color=red>Text&hellip;</font></p>
 <p><strong>Network</strong>
 : The network on which this service resides (i.e. whether it’s a cable
   channel or a terrestrial one)</p>
 <p><strong>Mux</strong>
 : The mux which carries this service. This is typically the frequency of
   the carrier signal in kHz, with polarisation (H or V) as applicable.</p>
+<p><strong>Mux UUID</strong>
+:  <font color=red>Text&hellip;</font></p>
 <p><strong>Service ID</strong>
 : A unique identifier for this service within this mux/transport stream.</p>
 <p><strong>Local Channel Number</strong>
 : Channel number as assigned by the broadcaster.</p>
+<p><strong>Local Channel Minor</strong>
+:  <font color=red>Text&hellip;</font></p>
+<p><strong>OpenTV Channel Number</strong>
+:  <font color=red>Text&hellip;</font></p>
 <p><strong>Provider</strong>
 : Any supplied provider string, e.g. where multiple broadcasters share a
   platform, such as for free-to-air and pay TV.</p>
@@ -524,6 +601,10 @@ Channels.</p>
 <p><strong>Service Type</strong>
 : The service type flag as defined by the DVB specifications (e.g. 0x02 =
   radio, 0x11 = MPEG2 HD TV, 0x19 = H.264 HD TV)</p>
+<p><strong>Ignore EPG (EIT)</strong>
+:  <font color=red>Text&hellip;</font></p>
+<p><strong>Character Set</strong>
+: The character encoding for this service (e.g. UTF-8).</p>
 <p><strong>Pref. CA PID</strong>
 : The Preferred Conditional Access Packet Identifier. Used for decrypting
   scrambled streams.</p>
@@ -541,11 +622,12 @@ Channels.</p>
   automatic modifications allowed).</p>
 </li>
 </ul>
-<p><strong>Only Pref. CA PID</strong>
-: Filter mode - use only Preferred Conditional Access Packet Identifier
-  for the streams decryption.</p>
-<p><strong>Character Set</strong>
-: The character encoding for this service (e.g. UTF-8).</p>
+<p><strong>Force CA ID (e.g. 0x2600)</strong>
+:  <font color=red>Text&hellip;</font></p>
+<p><strong>Created</strong>
+:  When the service was first identified and recorded.</p>
+<p><strong>Last Seen</strong>
+:  Whenthe service was last seen during a mux scan.</p>
               
             </div>
           </div>

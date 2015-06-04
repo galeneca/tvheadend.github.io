@@ -52,15 +52,22 @@
         <ul class="current">
           
             <li>
+    <ul class="subnav">
+    <li><span>Introduction</span></li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../..">Home</a>
         
     </li>
-<li>
-          
-            <li>
-    <ul class="subnav">
-    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../todo/">To-do</a>
+        
+    </li>
 
         
             
@@ -72,7 +79,29 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../Before_you_begin/">Before you begin - some basic concepts</a>
+        <a class="" href="../../basic_requirements/">Basic Requirements</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../features/">Features</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../before_you_begin/">Before you begin - some basic concepts</a>
         
     </li>
 
@@ -275,7 +304,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../config_esfilter/">Video Stream Filters</a>
+        <a class="" href="../config_esfilter/">(Various) Stream Filters</a>
         
     </li>
 
@@ -315,7 +344,7 @@
                 
                     <li><a class="toctree-l4" href="#menu-barbuttons">Menu Bar/Buttons</a></li>
                 
-                    <li><a class="toctree-l4" href="#columns">Columns</a></li>
+                    <li><a class="toctree-l4" href="#grid-items">Grid Items</a></li>
                 
             
             </ul>
@@ -326,6 +355,42 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../config_tvhlog/">Debugging</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Status Tab</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_stream/">Stream</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_subscriptions/">Subscriptions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_connections/">Connections</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../status_servicemapper/">Service Mapper</a>
         
     </li>
 
@@ -434,31 +499,9 @@
             <div class="section">
               
                 <h2 id="configuration-cas">Configuration - CAs</h2>
-<p>Tvheadend support connecting to card clients via the cwc (newcamd) or
-capmt (dvbapi) protocol for so called softcam descrambling.</p>
+<p>Tvheadend support connecting to card clients via the cwc (newcamd) and
+capmt (dvbapi) protocols for so-called &lsquo;softcam&rsquo; descrambling.</p>
 <p><img alt="'CAs' Tab" src="../docresources/configcwc.png" /></p>
-<p>The servers are listed / edited in a grid.</p>
-<ul>
-<li>
-<p>To edit a cell, double click on it. After a cell is changed it will
-  flags one of its corner to red to indicated that it has been
-  changed. To commit these changes back to Tvheadend press the ‘Save
-  changes’ button. In order to change a Checkbox cell you only have to
-  click once in it.</p>
-</li>
-<li>
-<p>To add a new entry, press the ‘Add entry’ button. The new (empty)
-  entry will be created on the server but will not be in its enabled
-  state. You can now change all the cells to the desired values, check
-  the ‘enable’ box and then press ‘Save changes’ to activate the new
-  entry.</p>
-</li>
-<li>
-<p>To delete one or more entries, select the lines (by clicking once on
-  them), and press the ‘Delete selected’ button. A pop up will ask you
-  to confirm your request.</p>
-</li>
-</ul>
 <hr />
 <h4 id="menu-barbuttons">Menu Bar/Buttons</h4>
 <p>The following functions are available:</p>
@@ -471,22 +514,42 @@ capmt (dvbapi) protocol for so called softcam descrambling.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>Button</strong></td>
-<td></td>
+<td><strong>Save</strong></td>
+<td>Save any changes made to the CA client configuration</td>
 </tr>
 <tr>
-<td><strong>Button</strong></td>
-<td></td>
+<td><strong>Undo</strong></td>
+<td>Undo any changes made to the CA client configuration since the last save.</td>
 </tr>
 <tr>
-<td><strong>Button</strong></td>
-<td></td>
+<td><strong>Add</strong></td>
+<td>Add a new CA client configuration.</td>
+</tr>
+<tr>
+<td><strong>Delete</strong></td>
+<td>Delete an existing CA client configuration.</td>
+</tr>
+<tr>
+<td><strong>Move Up</strong></td>
+<td>Move the selected CA client configuration up in the list.</td>
+</tr>
+<tr>
+<td><strong>Move Down</strong></td>
+<td>Move the selected CA client configuration down in the list.</td>
+</tr>
+<tr>
+<td><strong>Show Passwords</strong></td>
+<td>Reveals any stored CA client passwords.</td>
+</tr>
+<tr>
+<td><strong>Help</strong></td>
+<td>Display this help page.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h4 id="columns">Columns</h4>
-<p>The columns have the following functions:</p>
+<h4 id="grid-items">Grid Items</h4>
+<p>The main grid items have the following functions:</p>
 <p><strong>Enabled</strong>
 : If selected, connection will be tried to be established and retained up.
   If unselected, Tvheadend will disconnect (if connected) and not try to
