@@ -357,6 +357,9 @@
                     <li><a class="toctree-l4" href="#configuration-options">Configuration Options</a></li>
                 
             
+                <li class="toctree-l3"><a href="#note-itd-be-helpful-to-expand-as-to-what-happens-on-what-distro">Note: It'd be helpful to expand as to what happens on what distro...</a></li>
+                
+            
             </ul>
         
     </li>
@@ -502,9 +505,9 @@
             <div class="section">
               
                 <h2 id="configuration-debugging">Configuration - Debugging</h2>
-<p><img alt="'Debugging' Tab" src="../docresources/configtvhlog.png" /></p>
 <p>This tab is used to configure various debugging options in tvheadend.</p>
 <h2 id="noterename-this-and-the-html-to-config_degugging-for-consistency">NOTE:<font color=red>Rename this and the html to config_degugging for consistency</font></h2>
+<p><img alt="'Debugging' Tab" src="../docresources/configtvhlog.png" /></p>
 <hr />
 <h4 id="menu-barbuttons">Menu Bar/Buttons</h4>
 <p>The following functions are available:</p>
@@ -529,22 +532,26 @@
 <hr />
 <h4 id="configuration-options">Configuration Options</h4>
 <p><strong>Debug log path</strong>
-: text   </p>
+: <font color=red>Text&hellip;</font>   </p>
 <p><strong>Debug to syslog</strong>
-: text   </p>
+: <font color=red>Text&hellip;</font>   </p>
 <p><strong>Debug trace (low-level stuff)</strong>
-: text</p>
+: <font color=red>Text&hellip;</font>   </p>
 <p><strong>Debug subsystems</strong>
-: text   </p>
+: <font color=red>Text&hellip;</font>   </p>
 <p><strong>Trace subsystems</strong>
-: text   </p>
+: <font color=red>Text&hellip;</font>   </p>
 <p>Changes to any of these settings must be confirmed by pressing the ‘Save
 configuration’ button before taking effect.</p>
-<p>Note that the settings is not saved to a storage. It is available only
-until the actual tvheadend process is running. If you like to change the
-default behaviour permanently, use the command line options like <code>-l</code>,
-<code>–debug</code>, <code>–trace</code>. This configuration is stored usually in the
-/etc/sysconfig tree (depending on the distribution) or an init script.</p>
+<p>Note that settings are not saved to a storage. Any change is available only
+while Tvheadend is running, and will be lost on a restart. To change the
+default behaviour permanently, use command line options such as <code>-l</code>,
+<code>–debug</code>, <code>–trace</code>.</p>
+<p>Depending on your distribution, the default command-line configuration is
+usually stored in the <code>/etc/sysconfig</code> tree or an init script. You may also
+be able to change <code>/etc/default/tvheadend</code> to add additional command-line
+parameters.</p>
+<h2 id="note-itd-be-helpful-to-expand-as-to-what-happens-on-what-distro">Note: <font color=red>It&rsquo;d be helpful to expand as to what happens on what distro&hellip;</font></h2>
               
             </div>
           </div>
