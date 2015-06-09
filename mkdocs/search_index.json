@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Tvheadend 4.0 User Guide\n\uf0c1\n\n\n\n\nVersion: \nDRAFT\n\n\nLast Updated: \n2015-06-06\n\n\n\n\nA Moving Target!\n\n\nThis document has many holes, and is very much a work-in-progress. Please\nforgive any errors, omissions or inaccuracies, and please help us to fill them in if you can.\n\n\n\n\n\nPurpose\n\uf0c1\n\n\nThis document is intended to give you a high-level overview of how to set \nup Tvheadend for the first time. It does not aim to provide a complete description\nof every step or answer every question: more details are available on the\ntvheadend \nwiki\n.\n\n\nAs you set things up, consult the on-line (web interface) help as well.\nTvheadend includes copies of many of these pages in the application, which\nis easier to find when you\nre wondering what to do next.\n\n\nIf you get really stuck, there\ns the \nforum\n\nand IRC (\n#hts\n on \nfreenode\n) - \nKiwi IRC\n is a good web\nclient if you don\nt already have an IRC client installed.", 
+            "text": "Tvheadend 4.0 User Guide\n\uf0c1\n\n\n\n\nVersion: \nDRAFT\n\n\nLast Updated: \n2015-06-09\n\n\n\n\nA Moving Target!\n\n\nThis document has many holes, and is very much a work-in-progress. Please\nforgive any errors, omissions or inaccuracies, and please help us to fill them in if you can.\n\n\n\n\n\nPurpose\n\uf0c1\n\n\nThis document is intended to give you a high-level overview of how to set \nup Tvheadend for the first time. It does not aim to provide a complete description\nof every step or answer every question: more details are available on the\ntvheadend \nwiki\n.\n\n\nAs you set things up, consult the on-line (web interface) help as well.\nTvheadend includes copies of many of these pages in the application, which\nis easier to find when you\nre wondering what to do next.\n\n\nIf you get really stuck, there\ns the \nforum\n\nand IRC (\n#hts\n on \nfreenode\n) - \nKiwi IRC\n is a good web\nclient if you don\nt already have an IRC client installed.", 
             "title": "Home"
         }, 
         {
             "location": "/#tvheadend-40-user-guide", 
-            "text": "Version:  DRAFT  Last Updated:  2015-06-06   A Moving Target!  This document has many holes, and is very much a work-in-progress. Please\nforgive any errors, omissions or inaccuracies, and please help us to fill them in if you can.", 
+            "text": "Version:  DRAFT  Last Updated:  2015-06-09   A Moving Target!  This document has many holes, and is very much a work-in-progress. Please\nforgive any errors, omissions or inaccuracies, and please help us to fill them in if you can.", 
             "title": "Tvheadend 4.0 User Guide"
         }, 
         {
