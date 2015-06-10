@@ -152,10 +152,6 @@
                 
                     <li><a class="toctree-l4" href="#menu-barbuttons">Menu Bar/Buttons</a></li>
                 
-                    <li><a class="toctree-l4" href="#filtering-or-searching">Filtering (or searching)</a></li>
-                
-                    <li><a class="toctree-l4" href="#buttons">Buttons</a></li>
-                
                     <li><a class="toctree-l4" href="#grid-items">Grid Items</a></li>
                 
                     <li><a class="toctree-l4" href="#event-details-and-recording">Event details and recording</a></li>
@@ -517,7 +513,7 @@ such as XMLTV.</p>
 based on start time.</p>
 <p><img alt="'Electronic Program Guide' Tab" src="../docresources/epg.png" /></p>
 <hr />
-<h4 id="menu-barbuttons"><a class="toclink" href="#menu-barbuttons">Menu Bar/Buttons</a><a class="headerlink" href="#menu-barbuttons" title="Permanent link"></a></h4>
+<h3 id="menu-barbuttons"><a class="toclink" href="#menu-barbuttons">Menu Bar/Buttons</a><a class="headerlink" href="#menu-barbuttons" title="Permanent link"></a></h3>
 <p>The following functions are available:</p>
 <h4 id="filtering-or-searching"><a class="toclink" href="#filtering-or-searching">Filtering (or searching)</a><a class="headerlink" href="#filtering-or-searching" title="Permanent link"></a></h4>
 <p>In the EPG top tool bar you can access five input fields. These are used
@@ -538,7 +534,7 @@ displayed.</p>
 </tr>
 <tr>
 <td><strong>Filter channel&hellip;</strong></td>
-<td>Only display events from the selected channel.<br><br>Channels in the drop down are ordered by channel number and can be filtered (by name) by typing in the box.</td>
+<td>Only display events from the selected channel.<br><br>Channels in the drop down are ordered by name and can be filtered (by name) by typing in the box.</td>
 </tr>
 <tr>
 <td><strong>Filter tag&hellip;</strong></td>
@@ -614,7 +610,7 @@ button.</p>
 </tr>
 <tr>
 <td><strong>Watch TV</strong></td>
-<td>Launches Live TV via the VLC plugin (see below).</td>
+<td>Launches Live TV via HTML5 video (see below).</td>
 </tr>
 <tr>
 <td><strong>Create Autorec</strong></td>
@@ -627,15 +623,15 @@ button.</p>
 </tbody>
 </table>
 <hr />
-<h4 id="grid-items"><a class="toclink" href="#grid-items">Grid Items</a><a class="headerlink" href="#grid-items" title="Permanent link"></a></h4>
+<h3 id="grid-items"><a class="toclink" href="#grid-items">Grid Items</a><a class="headerlink" href="#grid-items" title="Permanent link"></a></h3>
 <p>The main grid items have the following functions:</p>
 <p><strong>Details</strong>
 : Displays the current status of a recording event for this programme if 
   one applies: </p>
 <ul>
-<li><img class = iconimg src="../icons/clock.png" alt="Clock icon"> - the programme is scheduled for recording</li>
-<li><img class = iconimg src="../icons/rec.png" alt="Recording icon"> - the programme is currently recording</li>
-<li>You can also click on the information icon <img class = iconimg src="../icons/information.png" alt="Information icon"> to call up more detailed
+<li><img class="iconimg" src="../icons/clock.png" alt="Clock icon"> - the programme is scheduled for recording</li>
+<li><img class="iconimg" src="../icons/rec.png" alt="Recording icon"> - the programme is currently recording</li>
+<li>You can also click on the broadcast details icon <img class="iconimg" src="../icons/broadcast_details.png" alt="Broadcast details icon"> to call up more detailed
   information about an event.</li>
 </ul>
 <p><strong>Progress</strong>
@@ -664,16 +660,16 @@ button.</p>
   value of this field by clicking on it (e.g. click on &lsquo;Channel 4 HD&rsquo; will
   automatically filter the whole grid to only show programmes from that channel).</em></p>
 <p><strong>Stars</strong>
-: <font color=red>Text&hellip;</font></p>
+: Rating (in stars) of the programme.</p>
 <p><strong>Age</strong>
-: <font color=red>Text&hellip;</font></p>
+: Age rating of the programme.</p>
 <p><strong>Content Type</strong>
 : Any content/genre information as provided by the EPG provider. <em>You can
   automatically set a filter to the value of this field by clicking on it
   (e.g. click on &lsquo;Movie/Drama&rsquo; will automatically filter the whole grid
   to only show programmes of the same type).</em></p>
 <hr />
-<h4 id="event-details-and-recording"><a class="toclink" href="#event-details-and-recording">Event details and recording</a><a class="headerlink" href="#event-details-and-recording" title="Permanent link"></a></h4>
+<h3 id="event-details-and-recording"><a class="toclink" href="#event-details-and-recording">Event details and recording</a><a class="headerlink" href="#event-details-and-recording" title="Permanent link"></a></h3>
 <p>If you click on a single event, a popup will display detailed
 information about the event. It also allows you to schedule the event
 for recording by clicking on the <em>[Record program]</em> button.</p>
@@ -692,9 +688,9 @@ Recorder</strong> tab. This allows you to set, for example, more post-
 broadcast padding for a channel that always runs late, or perhaps define
 a different post-processing command to strip adverts out on a commercial
 channel.</p>
-<p>You will also see a <em>Search IMDB</em> link to look for the programme by name
-on imdb.com, and a <em>Play</em> link to watch a programme that’s already in
-progress. This second link downloads a playlist file (XSPF or M3U
+<p>You will also see a <em>[Search IMDB]</em> button to look for the programme by name
+on imdb.com, and a <em>[Play program]</em> button to watch a programme that’s already
+in progress. This second button downloads a playlist file (XSPF or M3U
 depending on your startup options); if your system is configured for it,
 this will automatically launch an appropriate player, otherwise you will
 need to manually open the playlist to start watching (normally a
@@ -703,7 +699,7 @@ double-click on the downloaded file).</p>
 modal, so you don’t have to close it before doing something else, and
 you can open as many detailed information popups as you want.</p>
 <hr />
-<h4 id="autorecordings"><a class="toclink" href="#autorecordings">Autorecordings</a><a class="headerlink" href="#autorecordings" title="Permanent link"></a></h4>
+<h3 id="autorecordings"><a class="toclink" href="#autorecordings">Autorecordings</a><a class="headerlink" href="#autorecordings" title="Permanent link"></a></h3>
 <p>Should you wish to record all events matching a specific query (to
 record your favourite show every week, for example) you can press the
 <em>[Create AutoRec]</em> button in the top toolbar.</p>
@@ -714,10 +710,93 @@ be confirmed before the rule takes effect.</p>
 Recorder</strong> tab. Use that editor if you temporarily want to disable an
 autorecording or make adjustments to the channel, tag, or similar.</p>
 <hr />
-<h4 id="watch-tv"><a class="toclink" href="#watch-tv">Watch TV</a><a class="headerlink" href="#watch-tv" title="Permanent link"></a></h4>
+<h3 id="watch-tv"><a class="toclink" href="#watch-tv">Watch TV</a><a class="headerlink" href="#watch-tv" title="Permanent link"></a></h3>
 <p>If you want to watch live TV in the web UI, the <em>[Watch TV]</em> button will
-pop up a VLC plugin window (if you don’t have the plugin installed a
-direct URL should be provided to load into your preferred media player).</p>
+pop up a HTML5 video player, where you can select the channel to watch and a
+stream profile to use. A transcoding stream profile is required to transcode 
+the stream to a format that is supported by your browser, as browsers only
+support certain formats and codecs.</p>
+<h4 id="supported-formats-containers"><a class="toclink" href="#supported-formats-containers">Supported formats (containers)</a><a class="headerlink" href="#supported-formats-containers" title="Permanent link"></a></h4>
+<table>
+<thead>
+<tr>
+<th>Browser</th>
+<th>MPEG-TS</th>
+<th>MPEG-PS</th>
+<th>Matroska</th>
+<th align="right">WebM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Chrome</td>
+<td><img alt="no" src="../icons/exclamation.png" /></td>
+<td><img alt="no" src="../icons/exclamation.png" /></td>
+<td><img alt="yes" src="../icons/accept.png" /></td>
+<td align="right"><img alt="yes" src="../icons/accept.png" /></td>
+</tr>
+<tr>
+<td>Mozilla Firefox</td>
+<td><img alt="no" src="../icons/exclamation.png" /></td>
+<td><img alt="no" src="../icons/exclamation.png" /></td>
+<td></td>
+<td align="right"><img alt="yes" src="../icons/accept.png" /></td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-video-codecs"><a class="toclink" href="#supported-video-codecs">Supported video codecs</a><a class="headerlink" href="#supported-video-codecs" title="Permanent link"></a></h4>
+<table>
+<thead>
+<tr>
+<th>Browser</th>
+<th>MPEG2 Video</th>
+<th>H.264</th>
+<th align="right">VP8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Chrome</td>
+<td><img alt="no" src="../icons/exclamation.png" /></td>
+<td><img alt="yes" src="../icons/accept.png" /></td>
+<td align="right"><img alt="yes" src="../icons/accept.png" /></td>
+</tr>
+<tr>
+<td>Mozilla Firefox</td>
+<td><img alt="no" src="../icons/exclamation.png" /></td>
+<td></td>
+<td align="right"><img alt="yes" src="../icons/accept.png" /></td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-audio-codecs"><a class="toclink" href="#supported-audio-codecs">Supported audio codecs</a><a class="headerlink" href="#supported-audio-codecs" title="Permanent link"></a></h4>
+<table>
+<thead>
+<tr>
+<th>Browser</th>
+<th>MPEG2 Audio</th>
+<th>Dolby Digital (AC3)</th>
+<th>AAC</th>
+<th align="right">Vorbis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Chrome</td>
+<td><img alt="no" src="../icons/exclamation.png" /></td>
+<td><img alt="no" src="../icons/exclamation.png" /></td>
+<td><img alt="yes" src="../icons/accept.png" /></td>
+<td align="right"><img alt="yes" src="../icons/accept.png" /></td>
+</tr>
+<tr>
+<td>Mozilla Firefox</td>
+<td><img alt="no" src="../icons/exclamation.png" /></td>
+<td><img alt="no" src="../icons/exclamation.png" /></td>
+<td></td>
+<td align="right"><img alt="yes" src="../icons/accept.png" /></td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div>
