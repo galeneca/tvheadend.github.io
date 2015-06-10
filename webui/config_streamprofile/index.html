@@ -301,21 +301,22 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#configuration-stream-stream-profile">Configuration - Stream - Stream Profile</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#note-intro-text-required">NOTE: INTRO TEXT REQUIRED</a></li>
+                <li class="toctree-l3"><a href="#configuration-stream-stream-profiles">Configuration - Stream - Stream Profiles</a></li>
                 
             
                 <li class="toctree-l3"><a href="#note-screenshot-required">NOTE: SCREENSHOT REQUIRED</a></li>
                 
                     <li><a class="toctree-l4" href="#menu-barbuttons">Menu Bar/Buttons</a></li>
                 
-                    <li><a class="toctree-l4" href="#configuration-options">Configuration Options</a></li>
-                
                     <li><a class="toctree-l4" href="#stream-profile-types">Stream Profile Types</a></li>
                 
-                    <li><a class="toctree-l4" href="#transcoding-settings">Transcoding Settings</a></li>
+                    <li><a class="toctree-l4" href="#common-settings">Common Settings</a></li>
+                
+                    <li><a class="toctree-l4" href="#mpeg-ts-pass-through-settings">MPEG-TS Pass-through Settings</a></li>
+                
+                    <li><a class="toctree-l4" href="#matroska-settings">Matroska Settings</a></li>
+                
+                    <li><a class="toctree-l4" href="#transcode-settings">Transcode Settings</a></li>
                 
             
             </ul>
@@ -508,11 +509,13 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="configuration-stream-stream-profile"><a class="toclink" href="#configuration-stream-stream-profile">Configuration - Stream - Stream Profile</a><a class="headerlink" href="#configuration-stream-stream-profile" title="Permanent link"></a></h2>
-<h2 id="note-intro-text-required"><a class="toclink" href="#note-intro-text-required">NOTE: <font color=red>INTRO TEXT REQUIRED</font></a><a class="headerlink" href="#note-intro-text-required" title="Permanent link"></a></h2>
+                <h2 id="configuration-stream-stream-profiles"><a class="toclink" href="#configuration-stream-stream-profiles">Configuration - Stream - Stream Profiles</a><a class="headerlink" href="#configuration-stream-stream-profiles" title="Permanent link"></a></h2>
+<p>Stream Profiles are the settings for output formats. These are used for Live TV
+streaming and recordings. The profiles are assigned through the Access Entries,
+DVR Profiles or as parameter for HTTP Streaming.</p>
 <h2 id="note-screenshot-required"><a class="toclink" href="#note-screenshot-required">NOTE: <font color=red>SCREENSHOT REQUIRED</font></a><a class="headerlink" href="#note-screenshot-required" title="Permanent link"></a></h2>
 <hr />
-<h4 id="menu-barbuttons"><a class="toclink" href="#menu-barbuttons">Menu Bar/Buttons</a><a class="headerlink" href="#menu-barbuttons" title="Permanent link"></a></h4>
+<h3 id="menu-barbuttons"><a class="toclink" href="#menu-barbuttons">Menu Bar/Buttons</a><a class="headerlink" href="#menu-barbuttons" title="Permanent link"></a></h3>
 <p>The following functions are available:</p>
 <table>
 <thead>
@@ -545,32 +548,61 @@
 </tbody>
 </table>
 <hr />
-<h4 id="configuration-options"><a class="toclink" href="#configuration-options">Configuration Options</a><a class="headerlink" href="#configuration-options" title="Permanent link"></a></h4>
-<h4 id="stream-profile-types"><a class="toclink" href="#stream-profile-types">Stream Profile Types</a><a class="headerlink" href="#stream-profile-types" title="Permanent link"></a></h4>
+<h3 id="stream-profile-types"><a class="toclink" href="#stream-profile-types">Stream Profile Types</a><a class="headerlink" href="#stream-profile-types" title="Permanent link"></a></h3>
 <p><strong>MPEG-TS Pass-through /build-in</strong>
-: MPEG-TS pass through muxer (built-in)</p>
+: Pass through of MPEG-TS packets</p>
 <p><strong>Matroska (mkv) /build-in</strong>
-: Matroska/WebM muxer (built-in)</p>
+: Matroska/WebM muxer (built-in) to output in Matroska format</p>
 <p><strong>HTSP Stream Profile</strong>
-: HTSP Default Stream Settings</p>
+: Stream Settings for HTSP</p>
 <p><strong>MPEG-TS /av-lib</strong>
-: MPEG-TS stream muxer (libav)</p>
+: MPEG-TS stream muxer (libav) to output in MPEG-TS format (only available with libav/ffmpeg)</p>
 <p><strong>Matroska /av-lib</strong>
-: Matroska/WebM muxer (libav)</p>
+: Matroska/WebM muxer (libav) to output in Matroska format (only available with libav/ffmpeg)</p>
 <p><strong>Transcode /av-lib</strong>
-: Transcode video/audio/subtitles to different codecs and containers</p>
-<h4 id="transcoding-settings"><a class="toclink" href="#transcoding-settings">Transcoding Settings</a><a class="headerlink" href="#transcoding-settings" title="Permanent link"></a></h4>
+: Transcode video/audio/subtitles with various encoders and output in various formats (only available with libav/ffmpeg)</p>
+<h3 id="common-settings"><a class="toclink" href="#common-settings">Common Settings</a><a class="headerlink" href="#common-settings" title="Permanent link"></a></h3>
+<p><strong>Enabled</strong>
+: Profile is enabled</p>
+<p><strong>Default</strong>
+: Profile is the default profile</p>
+<p><strong>Default Priority</strong>
+: TODO</p>
+<p><strong>Force Priority</strong>
+: TODO</p>
+<p><strong>Timeout</strong>
+: Timeout for streaming to start</p>
+<p><strong>Restart On Error</strong>
+: Restart streaming on error (useful for DVR)</p>
+<p><strong>Continue On Access Error</strong>
+: Don&rsquo;t abort streaming, when an encrypted stream can&rsquo;t be decrypted by a suitable CA client</p>
+<p><strong>Preferred Service Video Type</strong>
+: If a certain video type should be preferred, when multiple services are available for a channel</p>
+<h3 id="mpeg-ts-pass-through-settings"><a class="toclink" href="#mpeg-ts-pass-through-settings">MPEG-TS Pass-through Settings</a><a class="headerlink" href="#mpeg-ts-pass-through-settings" title="Permanent link"></a></h3>
+<p><strong>Rewrite PMT</strong>
+: TODO</p>
+<p><strong>Rewrite PAT</strong>
+: TODO</p>
+<p><strong>Rewrite SDT</strong>
+: TODO</p>
+<p><strong>Rewrite EIT</strong>
+: TODO</p>
+<h3 id="matroska-settings"><a class="toclink" href="#matroska-settings">Matroska Settings</a><a class="headerlink" href="#matroska-settings" title="Permanent link"></a></h3>
+<p><strong>WEBM</strong>
+: Use WebM format (WebM is a restricted subset of the Matroska format)</p>
+<h3 id="transcode-settings"><a class="toclink" href="#transcode-settings">Transcode Settings</a><a class="headerlink" href="#transcode-settings" title="Permanent link"></a></h3>
 <p><strong>Container</strong>
 : Container to use for transcoded streams.</p>
 <p><strong>Resolution</strong>
 : Vertical resolution (height) of the output video stream. Horizontal resolution
-  is adjusted automatically to preserve aspect ratio.</p>
+  is adjusted automatically to preserve aspect ratio. When set to 0, the input
+  resolution is used.</p>
 <p><strong>Channels</strong>
 : Channel layout for audio streams.</p>
 <p><strong>Language</strong>
 : Currently unused.</p>
 <p><strong>Video Codec</strong>
-: Codec for video stream.</p>
+: Video encoder codec.</p>
 <ul>
 <li>
 <p><strong>Do not use</strong>
@@ -579,6 +611,10 @@
 <li>
 <p><strong>Copy codec type</strong>
 : Pass through video stream without transcoding.</p>
+</li>
+<li>
+<p><strong>mpeg2video/libvpx/libx264/&hellip;</strong>
+: Transcode video to the selected codec.</p>
 </li>
 </ul>
 <p><strong>Video Bitrate</strong>
@@ -613,10 +649,13 @@
 : Pass through audio streams without transcoding.</p>
 </li>
 <li>
-<p><strong>Audio Bitrate</strong>
-: Audio bitrate of the transcoded audio streams.</p>
+<p><strong>aac/mp2/libvorbis/&hellip;</strong>
+: Transcode audio to the selected codec. (Note: if &ldquo;vorbis&rdquo; and &ldquo;libvorbis&rdquo; are 
+  available, &ldquo;libvorbis&rdquo; should be prefered when transcoding to Vorbis format)</p>
 </li>
 </ul>
+<p><strong>Audio Bitrate</strong>
+: Audio bitrate of the transcoded audio streams.</p>
 <p><strong>Subtitles Codec</strong>
 : Codec for subtitles.</p>
 <ul>
