@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Stream Profiles - Tvheadend 4.0</title>
+  <title>Debugging - Tvheadend 4.0</title>
   
 
   <link rel="shortcut icon" href="../../images/favicon.png">
@@ -22,7 +22,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Stream Profiles";
+    var mkdocs_page_name = "Debugging";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -303,27 +303,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Stream Profiles</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#configuration-stream-stream-profiles">Configuration - Stream - Stream Profiles</a></li>
-                
-                    <li><a class="toctree-l4" href="#menu-barbuttons">Menu Bar/Buttons</a></li>
-                
-                    <li><a class="toctree-l4" href="#stream-profile-types">Stream Profile Types</a></li>
-                
-                    <li><a class="toctree-l4" href="#common-settings">Common Settings</a></li>
-                
-                    <li><a class="toctree-l4" href="#mpeg-ts-pass-through-settings">MPEG-TS Pass-through Settings</a></li>
-                
-                    <li><a class="toctree-l4" href="#matroska-settings">Matroska Settings</a></li>
-                
-                    <li><a class="toctree-l4" href="#transcode-settings">Transcode Settings</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../config_streamprofile/">Stream Profiles</a>
         
     </li>
 
@@ -368,8 +349,22 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../config_debugging/">Debugging</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Debugging</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#configuration-debugging">Configuration - Debugging</a></li>
+                
+                    <li><a class="toctree-l4" href="#menu-barbuttons">Menu Bar/Buttons</a></li>
+                
+                    <li><a class="toctree-l4" href="#configuration-options">Configuration Options</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#note-itd-be-helpful-to-expand-as-to-what-happens-on-what-distro">Note: It'd be helpful to expand as to what happens on what distro...</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -495,11 +490,11 @@
     
       
         
-          <li>Stream &raquo;</li>
+          <li>Configuration Tab &raquo;</li>
         
       
     
-    <li>Stream Profiles</li>
+    <li>Debugging</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -513,13 +508,11 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="configuration-stream-stream-profiles"><a class="toclink" href="#configuration-stream-stream-profiles">Configuration - Stream - Stream Profiles</a><a class="headerlink" href="#configuration-stream-stream-profiles" title="Permanent link"></a></h2>
-<p>Stream Profiles are the settings for output formats. These are used for Live TV
-streaming and recordings. The profiles are assigned through the Access Entries,
-DVR Profiles or as parameter for HTTP Streaming.</p>
-<p><img alt="'Stream Profiles'" src="../docresources/configstreamprofiles.png" /></p>
+                <h2 id="configuration-debugging"><a class="toclink" href="#configuration-debugging">Configuration - Debugging</a><a class="headerlink" href="#configuration-debugging" title="Permanent link"></a></h2>
+<p>This tab is used to configure various debugging options in tvheadend.</p>
+<p><img alt="'Debugging' Tab" src="../docresources/configtvhlog.png" /></p>
 <hr />
-<h3 id="menu-barbuttons"><a class="toclink" href="#menu-barbuttons">Menu Bar/Buttons</a><a class="headerlink" href="#menu-barbuttons" title="Permanent link"></a></h3>
+<h4 id="menu-barbuttons"><a class="toclink" href="#menu-barbuttons">Menu Bar/Buttons</a><a class="headerlink" href="#menu-barbuttons" title="Permanent link"></a></h4>
 <p>The following functions are available:</p>
 <table>
 <thead>
@@ -530,152 +523,38 @@ DVR Profiles or as parameter for HTTP Streaming.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>Save</strong></td>
-<td>Save any changes made to the stream profile configuration.</td>
-</tr>
-<tr>
-<td><strong>Undo</strong></td>
-<td>Undo any changes made to the stream profile configuration since the last save.</td>
-</tr>
-<tr>
-<td><strong>Add</strong></td>
-<td>Add a new stream profile.</td>
-</tr>
-<tr>
-<td><strong>Delete</strong></td>
-<td>Delete an existing stream profile.</td>
+<td><strong>Apply Configuration (run-time only)</strong></td>
+<td>Saves any changes made to the debugging configuration. Changes will be lost on a restart.</td>
 </tr>
 <tr>
 <td><strong>Help</strong></td>
-<td>Display this help page.</td>
+<td>Display this help page</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h3 id="stream-profile-types"><a class="toclink" href="#stream-profile-types">Stream Profile Types</a><a class="headerlink" href="#stream-profile-types" title="Permanent link"></a></h3>
-<p><strong>MPEG-TS Pass-through /build-in</strong>
-: Pass through of MPEG-TS packets.</p>
-<p><strong>Matroska (mkv) /build-in</strong>
-: Matroska/WebM muxer (built-in) to output in Matroska format.</p>
-<p><strong>HTSP Stream Profile</strong>
-: Stream Settings for HTSP.</p>
-<p><strong>MPEG-TS /av-lib</strong>
-: MPEG-TS stream muxer (libav) to output in MPEG-TS format
-  (only available with libav/ffmpeg).</p>
-<p><strong>Matroska /av-lib</strong>
-: Matroska/WebM muxer (libav) to output in Matroska format
-  (only available with libav/ffmpeg).</p>
-<p><strong>Transcode /av-lib</strong>
-: Transcode video/audio/subtitles with various encoders and output in various
-  formats (only available with libav/ffmpeg).</p>
-<h3 id="common-settings"><a class="toclink" href="#common-settings">Common Settings</a><a class="headerlink" href="#common-settings" title="Permanent link"></a></h3>
-<p><strong>Enabled</strong>
-: Profile is enabled.</p>
-<p><strong>Default</strong>
-: Profile is the default profile.</p>
-<p><strong>Default Priority</strong>
-: The priority of the profile, if no specific priority was requested. This allows
-  to give certain users a higher priority by assigning a streaming profile with
-  a higher priority.</p>
-<p><strong>Force Priority</strong>
-: Don&rsquo;t allow the Default Priority to be overridden.</p>
-<p><strong>Timeout</strong>
-: Timeout for streaming to start.</p>
-<p><strong>Restart On Error</strong>
-: Restart streaming on error. This is useful for DVR, so a recording isn&rsquo;t aborted
-  if an error occurs.</p>
-<p><strong>Continue On Access Error</strong>
-: Don&rsquo;t abort streaming, when an encrypted stream can&rsquo;t be decrypted by a
-  CA client, that normally should be able to decrypt the stream.</p>
-<p><strong>Preferred Service Video Type</strong> [<em>v4.2</em>]
-: The selected video type should be preferred, when multiple services are
-  available for a channel.</p>
-<h3 id="mpeg-ts-pass-through-settings"><a class="toclink" href="#mpeg-ts-pass-through-settings">MPEG-TS Pass-through Settings</a><a class="headerlink" href="#mpeg-ts-pass-through-settings" title="Permanent link"></a></h3>
-<p><strong>Rewrite PMT/PAT/SDT/EIT</strong>
-: Rewrite PMT/PAT/SDT/EIT packets to only include information about the currently
-  streamed service.</p>
-<h3 id="matroska-settings"><a class="toclink" href="#matroska-settings">Matroska Settings</a><a class="headerlink" href="#matroska-settings" title="Permanent link"></a></h3>
-<p><strong>WEBM</strong>
-: Use WebM format (WebM is a restricted subset of the Matroska format)</p>
-<h3 id="transcode-settings"><a class="toclink" href="#transcode-settings">Transcode Settings</a><a class="headerlink" href="#transcode-settings" title="Permanent link"></a></h3>
-<p><strong>Container</strong>
-: Container to use for transcoded streams.</p>
-<p><strong>Resolution</strong>
-: Vertical resolution (height) of the output video stream. Horizontal resolution
-  is adjusted automatically to preserve aspect ratio. When set to 0, the input
-  resolution is used.</p>
-<p><strong>Channels</strong>
-: Channel layout for audio streams.</p>
-<p><strong>Language</strong>
-: Currently unused.</p>
-<p><strong>Video Codec</strong>
-: Video encoder codec.</p>
-<ul>
-<li>
-<p><strong>Do not use</strong>
-: Don&rsquo;t output a video stream.</p>
-</li>
-<li>
-<p><strong>Copy codec type</strong>
-: Pass through video stream without transcoding.</p>
-</li>
-<li>
-<p><strong>mpeg2video/libvpx/libx264/&hellip;</strong>
-: Transcode video to the selected codec.</p>
-</li>
-</ul>
-<p><strong>Video Bitrate</strong>
-: Video quality/bitrate of the transcoded video stream.</p>
-<ul>
-<li>
-<p><strong>0: Automatic Setting (target quality)</strong>
-: The automatic setting is dependent on the used codec. The respective
-  values used are 5 for MPEG2 and 15 for H.264 and VP8, which are pretty high
-  and therefore might result in an even higher bitrate than the input video.</p>
-</li>
-<li>
-<p><strong>1-63: Target Quality</strong>
-: Use the given value to achieve average quality. A lower value results
-  in better quality. The resulting bitrate is dependent on the complexity
-  of the video stream.</p>
-</li>
-<li>
-<p><strong>&gt;63: Target Bitrate</strong>
-: Use the given value to achieve average bitrate. The resulting quality
-  is dependent on the complexity of the video stream.</p>
-</li>
-</ul>
-<p><strong>Audio Codec</strong>
-: Codec for audio streams.</p>
-<ul>
-<li>
-<p><strong>Do not use</strong>
-: Don&rsquo;t output an audio stream.</p>
-</li>
-<li>
-<p><strong>Copy codec type</strong>
-: Pass through audio streams without transcoding.</p>
-</li>
-<li>
-<p><strong>aac/mp2/libvorbis/&hellip;</strong>
-: Transcode audio to the selected codec. (Note: if &ldquo;vorbis&rdquo; and &ldquo;libvorbis&rdquo; are
-  available, &ldquo;libvorbis&rdquo; should be prefered when transcoding to Vorbis format)</p>
-</li>
-</ul>
-<p><strong>Audio Bitrate</strong>
-: Audio bitrate of the transcoded audio streams.</p>
-<p><strong>Subtitles Codec</strong>
-: Codec for subtitles.</p>
-<ul>
-<li>
-<p><strong>Do not use</strong>
-: Don&rsquo;t output subtitles.</p>
-</li>
-<li>
-<p><strong>Copy codec type</strong>
-: Pass through subtitles without transcoding.</p>
-</li>
-</ul>
+<h4 id="configuration-options"><a class="toclink" href="#configuration-options">Configuration Options</a><a class="headerlink" href="#configuration-options" title="Permanent link"></a></h4>
+<p><strong>Debug log path</strong>
+: <font color=red>Text&hellip;</font>   </p>
+<p><strong>Debug to syslog</strong>
+: <font color=red>Text&hellip;</font>   </p>
+<p><strong>Debug trace (low-level stuff)</strong>
+: <font color=red>Text&hellip;</font>   </p>
+<p><strong>Debug subsystems</strong>
+: <font color=red>Text&hellip;</font>   </p>
+<p><strong>Trace subsystems</strong>
+: <font color=red>Text&hellip;</font>   </p>
+<p>Changes to any of these settings must be confirmed by pressing the ‘Save
+configuration’ button before taking effect.</p>
+<p>Note that settings are not saved to a storage. Any change is available only
+while Tvheadend is running, and will be lost on a restart. To change the
+default behaviour permanently, use command line options such as <code>-l</code>,
+<code>–debug</code>, <code>–trace</code>.</p>
+<p>Depending on your distribution, the default command-line configuration is
+usually stored in the <code>/etc/sysconfig</code> tree or an init script. You may also
+be able to change <code>/etc/default/tvheadend</code> to add additional command-line
+parameters.</p>
+<h2 id="note-itd-be-helpful-to-expand-as-to-what-happens-on-what-distro"><a class="toclink" href="#note-itd-be-helpful-to-expand-as-to-what-happens-on-what-distro">Note: <font color=red>It&rsquo;d be helpful to expand as to what happens on what distro&hellip;</font></a><a class="headerlink" href="#note-itd-be-helpful-to-expand-as-to-what-happens-on-what-distro" title="Permanent link"></a></h2>
               
             </div>
           </div>
@@ -683,10 +562,10 @@ DVR Profiles or as parameter for HTTP Streaming.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../config_esfilter/" class="btn btn-neutral float-right" title="(Various) Stream Filters"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../status_stream/" class="btn btn-neutral float-right" title="Stream"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../config_epggrab/" class="btn btn-neutral" title="EPG Grabber"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../config_caclient/" class="btn btn-neutral" title="CAs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -716,10 +595,10 @@ DVR Profiles or as parameter for HTTP Streaming.</p>
           <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../config_epggrab/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../config_caclient/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../config_esfilter/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../status_stream/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
