@@ -164,6 +164,8 @@
                 
                     <li><a class="toctree-l4" href="#menu-barbuttons">Menu Bar/Buttons</a></li>
                 
+                    <li><a class="toctree-l4" href="#addedit-dialog-example">Add/Edit Dialog Example</a></li>
+                
                     <li><a class="toctree-l4" href="#grid-items">Grid Items</a></li>
                 
             
@@ -550,6 +552,11 @@
 </tbody>
 </table>
 <hr />
+<h4 id="addedit-dialog-example"><a class="toclink" href="#addedit-dialog-example">Add/Edit Dialog Example</a><a class="headerlink" href="#addedit-dialog-example" title="Permanent link"></a></h4>
+<p>A common set of fields is used for the <em>Add</em> or <em>Edit</em> functions, most
+of which can also be seen in the grid view:</p>
+<p><img alt="Add/Edit Upcoming Recording" src="../docresources/upcomingrecordings3.png" /></p>
+<hr />
 <h4 id="grid-items"><a class="toclink" href="#grid-items">Grid Items</a><a class="headerlink" href="#grid-items" title="Permanent link"></a></h4>
 <p>The main grid items have the following functions:</p>
 <p><strong>Details</strong>
@@ -579,14 +586,18 @@
 <p>The detailed information dialog is as follows:</p>
 <p><img alt="Detailed Recording Information" src="../docresources/upcomingrecordings2.png" /></p>
 <p><strong>Rerun Of</strong>
-: <font color=red>Text&hellip;</font></p>
+: If the recording is a repeat (rerun) this field will display the date
+the programme was previously broadcast. Note that this field is dependent
+on your epg source.</p>
 <p><strong>Title</strong>
 : The title (name) of the recording. While this is copied from the EPG
 when you create a recording, it’s not used to match the event itself and
 is thus used here as the name of the event (see also: adding an event
 manually with the <strong>Add</strong> button).</p>
 <p><strong>Subtitle</strong>
-: <font color=red>Text&hellip;</font></p>
+: The programme episode title if available. Note that some broadcasters
+(especially in the UK on Freeview) incorrectly insert the programme synopsis
+into the subtitle section of the OTA EPG data.</p>
 <p><strong>Episode</strong>
 : The episode number of the recording (whether this is available depends
 on your broadcaster and/or EPG data source).</p>
@@ -606,11 +617,13 @@ recording five minutes after the EPG stop time”).</p>
 : The total duration of the scheduled recording, including any extra time
 before or after.</p>
 <p><strong>File Size</strong>
-: <font color=red>Text&hellip;</font></p>
+: The current file size of the in-progress recording. This will continue
+to increase until the recording is complete.</p>
 <p><strong>Channel</strong>
 : The channel to be recorded.</p>
 <p><strong>Owner</strong>
-: <font color=red>Text&hellip;</font></p>
+: The logged-in user who created the recording. This will be blank if the
+user can&rsquo;t be verified.</p>
 <p><strong>Creator</strong>
 : The user who created the recording or the auto-recording source and IP
 address if scheduled by a matching rule.</p>
@@ -619,11 +632,14 @@ address if scheduled by a matching rule.</p>
 <p><strong>Schedule Status</strong>
 : The status of the recording (scheduled or recording).</p>
 <p><strong>Errors</strong>
-: <font color=red>Text&hellip;</font></p>
+: The number of transport stream errors encountered during the recording.</p>
 <p><strong>Data Errors</strong>
-: <font color=red>Text&hellip;</font></p>
+: The number of continuity errors encountered during the recording.</p>
 <p><strong>Comment</strong>
-: <font color=red>Text&hellip;</font></p>
+: This field allows you to enter a note about the recording; you can enter
+whatever you like here. This field will automatically be filled if the
+recording was created by an auto-recording rule, although you can still
+change it if you wish.</p>
               
             </div>
           </div>
