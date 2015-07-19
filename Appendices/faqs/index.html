@@ -524,7 +524,7 @@
 <p>Note: The above path only applies to Debian/Ubuntu systems others may differ.</p>
 <h3 id="q-why-cant-i-see-my-tuners-in-tvheadends-interface"><a class="toclink" href="#q-why-cant-i-see-my-tuners-in-tvheadends-interface">Q: Why can&rsquo;t I see my tuners in Tvheadend&rsquo;s interface?</a><a class="headerlink" href="#q-why-cant-i-see-my-tuners-in-tvheadends-interface" title="Permanent link"></a></h3>
 <p>This is normally because they&rsquo;re not installed properly. Check syslog/dmesg (e.g. <code>dmesg | grep dvb</code>) and see that you have startup 
-messages that indicate whether or not the tuenrs have initialized properly. Similarly, check <code>/dev/dvb</code> to 
+messages that indicate whether or not the tuners have initialized properly. Similarly, check <code>/dev/dvb</code> to 
 see if the block device files (i.e. the files used to communicate with the tuner) have been created correctly.</p>
 <p>The other major cause of this issue is when you&rsquo;re running Tvheadend as a user who doesn&rsquo;t have sufficient
 access to the tuners, such as not being a member of the <em>video</em> group.</p>
