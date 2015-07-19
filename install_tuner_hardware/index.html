@@ -514,7 +514,7 @@ before you hand over any money.</p>
 <p>There is a discussion about supported hardware on <a href="https://tvheadend.org/boards/5/topics/5102">the Tvheadend
 forums</a>.</p>
 <h3 id="1-install-the-tuner-hardware"><a class="toclink" href="#1-install-the-tuner-hardware">1. Install the Tuner Hardware</a><a class="headerlink" href="#1-install-the-tuner-hardware" title="Permanent link"></a></h3>
-<p>This is obviously a core requirement that&rsquo;s outside of the scope of this guide</p>
+<p>This is obviously a core requirement that&rsquo;s outside of the scope of this guide.</p>
 <p>You basically have the choice of:</p>
 <ul>
 <li>
@@ -524,7 +524,7 @@ forums</a>.</p>
 <p>Internal (e.g. PCI) tuners that go inside the computer chassis</p>
 </li>
 <li>
-<p>External SAT&gt;IP tuners that send their decoded signals over a LAN connection. </p>
+<p>External SAT&gt;IP tuners that send their decoded signals over a LAN connection</p>
 </li>
 </ul>
 <p>Follow the appropriate installation instructions and, if relevant, the
@@ -538,18 +538,29 @@ remember that many need external power, or need a powered hub to work properly.<
 <p>In addition, even USB3 doesn't have the greatest practical bandwidth per bus. That
 means you're probably asking for problems if you have four DVB-S2 dongles on the same USB
 connection to the motherboard.</p>
-</div>
+<p>This is particularly true of systems such as the Raspberry Pi which share USB
+bandwidth with the Ethernet port. Don't be surprised if this kind of platform struggles
+and/or reports errors in a multi-tuner configuration, especially on
+high-bandwidth (e.g. HD) streams.</p></div>
 
 <h3 id="2-install-firmware-andor-drivers"><a class="toclink" href="#2-install-firmware-andor-drivers">2. Install Firmware and/or Drivers</a><a class="headerlink" href="#2-install-firmware-andor-drivers" title="Permanent link"></a></h3>
 <p>Similar to the above, Tvheadend can do nothing if your tuners aren&rsquo;t working
 properly. A good place to check how to set up your tuners is the <a href="http://www.linuxtv.org/wiki/index.php/Hardware_Device_Information">LinuxTV wiki device library</a>
 - this will not only tell you what&rsquo;s supported under Linux, but also
 how to get it all working.</p>
-<p>Many tuners require firmware - normally, a binary file that&rsquo;s been extracted
-from the proprietary drivers used by Windows. Many Linux distros include a
-package for the most common devices (e.g. linux-firmwares under Ubuntu or
-firmware-linux-nonfree under Debian). If this isn&rsquo;t sufficient, a good source
-of firmware files is the <a href="https://github.com/OpenELEC/dvb-firmware">OpenElec firmware library</a>
+<p>As a broad guide, though, you need two main components: a driver, and firmware. </p>
+<p>The <strong>driver</strong> is the piece of software that, as far as the operating system is concerned,
+controls the tuner hardware. </p>
+<p>Driver software typically comes either built-in to the operating system
+(a clue here is documentation that says <em>&ldquo;supported since kernel 3.16&rdquo;</em>, for example)
+or as an external program that needs to be compiled in (e.g. how you&rsquo;d build TBS&rsquo;
+or Digital Devices drivers, or perhaps where the driver is supported in a later version
+of LinuxTV V4L-DVB than has made it to your kernel - the giveaway here is <em>&ldquo;compile and install the latest media_build&rdquo;</em>).</p>
+<p>Many tuners then also require <strong>firmware</strong> - normally, a binary file that&rsquo;s been
+extracted from the proprietary drivers used by Windows.</p>
+<p>Many Linux distros include a package for the most common devices (e.g.
+<em>linux-firmwares</em> under Ubuntu or <em>firmware-linux-nonfree</em> under Debian).
+If this isn&rsquo;t sufficient, a good source of firmware files is the<a href="https://github.com/OpenELEC/dvb-firmware">OpenElec firmware library</a>
 on their git repository.</p>
 <p>Typically, download the binary file and install it into <code>/lib/firmware</code>, owned
 by <code>root:root</code>, permissions <code>rw-r--r--</code> (0644)</p>
